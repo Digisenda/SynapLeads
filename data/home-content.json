@@ -1,0 +1,47 @@
+{
+  "hero": {
+    "title": "Conecta leads con agentes reales en segundos",
+    "subtitle": "La forma más rápida y confiable de escalar tu negocio de seguros",
+    "cta_text": "Solicitar Información",
+    "cta_url": "/seguros-gastos-finales.html",
+    "background_image": "assets/images/hero-bg.jpg"
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "subtitle": "Soluciones completas para tu negocio de seguros",
+    "items": [
+      {
+        "title": "Generación de Leads",
+        "description": "Leads calificados y listos para convertir en seguros de gastos finales",
+        "icon": "fas fa-users"
+      },
+      {
+        "title": "Live Transfer",
+        "description": "Conexión inmediata con leads interesados en menos de 30 segundos",
+        "icon": "fas fa-phone"
+      },
+      {
+        "title": "Nurturing Inteligente",
+        "description": "Seguimiento automatizado para maximizar las conversiones",
+        "icon": "fas fa-chart-line"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Lo que dicen nuestros clientes",
+    "items": [
+      {
+        "text": "Gracias a Synapleads, aumentamos un 40% nuestras conversiones en solo 2 meses.",
+        "author": "María González",
+        "position": "Agente de Seguros",
+        "image": "assets/images/testimonial-1.jpg"
+      }
+    ]
+  },
+  "cta_section": {
+    "title": "¿Listo para escalar tu negocio?",
+    "subtitle": "Únete a cientos de agentes que ya confían en Synapleads",
+    "cta_text": "Comenzar Ahora",
+    "cta_url": "/seguros-gastos-finales.html"
+  }
+}

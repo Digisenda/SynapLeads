@@ -1,0 +1,264 @@
+{
+  "page_title": "Seguro de Gastos Finales - Protege a tu Familia | Synapleads",
+  "meta_description": "Seguro de vida entera para gastos finales. Sin examen médico, cobertura hasta $30,000. Protege a tu familia con pagos mensuales manejables.",
+  
+  "hero": {
+    "badge_text": "Protección Garantizada",
+    "title": "Live Transfer para Seguros de Gastos Finales",
+    "description": "Protege a tu familia con un seguro de vida entera que cubre gastos funerarios y médicos finales. Sin examen médico, cobertura hasta $30,000, y pagos mensuales que se adaptan a tu presupuesto.",
+    "benefits": [
+      "Sin examen médico requerido",
+      "Cobertura desde el primer día", 
+      "Primas nunca aumentan"
+    ],
+    "cta_primary": "Conectar con Agente (30 segundos)",
+    "cta_secondary": "WhatsApp",
+    "trust_indicators": [
+      "+50,000 familias protegidas",
+      "Respuesta en menos de 30 segundos"
+    ]
+  },
+  
+  "form": {
+    "title": "Solicita Tu Cotización Gratuita",
+    "subtitle": "Completa el formulario y un agente especializado se pondrá en contacto contigo",
+    "fields": {
+      "nombre": {
+        "label": "Nombre Completo",
+        "required": true,
+        "type": "text"
+      },
+      "telefono": {
+        "label": "Número de Teléfono",
+        "required": true,
+        "type": "tel"
+      },
+      "estado": {
+        "label": "Estado de Residencia", 
+        "required": true,
+        "type": "select",
+        "options": [
+          {"value": "", "text": "Selecciona tu estado"},
+          {"value": "TX", "text": "Texas"},
+          {"value": "FL", "text": "Florida"},
+          {"value": "CA", "text": "California"},
+          {"value": "NY", "text": "Nueva York"},
+          {"value": "IL", "text": "Illinois"},
+          {"value": "PA", "text": "Pensilvania"},
+          {"value": "OH", "text": "Ohio"},
+          {"value": "GA", "text": "Georgia"},
+          {"value": "NC", "text": "Carolina del Norte"},
+          {"value": "MI", "text": "Michigan"},
+          {"value": "AZ", "text": "Arizona"},
+          {"value": "other", "text": "Otro"}
+        ]
+      },
+      "edad": {
+        "label": "Rango de Edad",
+        "required": true,
+        "type": "select",
+        "options": [
+          {"value": "", "text": "Selecciona tu edad"},
+          {"value": "40-49", "text": "40-49 años"},
+          {"value": "50-59", "text": "50-59 años"},
+          {"value": "60-69", "text": "60-69 años"},
+          {"value": "70-79", "text": "70-79 años"},
+          {"value": "80-85", "text": "80-85 años"}
+        ]
+      },
+      "contacto": {
+        "label": "Medio de Contacto Preferido",
+        "required": true,
+        "type": "radio",
+        "options": [
+          {"value": "llamada", "text": "Llamada Telefónica"},
+          {"value": "whatsapp", "text": "WhatsApp"}
+        ]
+      }
+    },
+    "consent_text": "Acepto recibir comunicaciones de seguros y autorizo el contacto telefónico.",
+    "privacy_link": "privacidad.html",
+    "submit_text": "Solicitar Información Gratuita",
+    "disclaimer": "Tu información está protegida y segura"
+  },
+  
+  "benefits_section": {
+    "title": "¿Por Qué Elegir Nuestro Seguro de Gastos Finales?",
+    "subtitle": "Un seguro simple y económico que te da tranquilidad y protege a tu familia cuando más lo necesiten",
+    "benefits": [
+      {
+        "icon": "fas fa-dollar-sign",
+        "title": "Pago en Efectivo",
+        "description": "Los beneficios se pagan en efectivo a tu beneficiario para cubrir gastos fúnebres, médicos finales y otros gastos relacionados."
+      },
+      {
+        "icon": "fas fa-user-md",
+        "title": "Sin Examen Médico",
+        "description": "Calificación basada en pocas preguntas de salud simples. Casi todas las personas califican fácilmente."
+      },
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "Cobertura Inmediata",
+        "description": "Estás protegido desde el primer día que tu prima inicial es procesada y tu póliza es emitida."
+      },
+      {
+        "icon": "fas fa-lock",
+        "title": "Primas Fijas",
+        "description": "Las primas nunca aumentan y los beneficios nunca disminuyen. Protección garantizada de por vida."
+      },
+      {
+        "icon": "fas fa-piggy-bank",
+        "title": "Valor en Efectivo",
+        "description": "Después de un período específico, acumula valor en efectivo que puedes usar o pedir prestado cuando necesites."
+      },
+      {
+        "icon": "fas fa-clock",
+        "title": "Reclamos Rápidos",
+        "description": "La mayoría de los reclamos son pagados dentro de 24 horas al recibo de los documentos necesarios."
+      }
+    ]
+  },
+  
+  "coverage_section": {
+    "title": "Cobertura Completa Para Tu Tranquilidad",
+    "description": "Nuestro seguro de gastos finales cubre todos los aspectos importantes para proteger a tu familia:",
+    "coverage_items": [
+      {
+        "title": "Servicios Funerarios",
+        "description": "Ataúd, servicios profesionales, transportación y ceremonias"
+      },
+      {
+        "title": "Gastos de Cementerio", 
+        "description": "Sepultura, bóveda, monumentos y marcadores"
+      },
+      {
+        "title": "Cuentas Médicas Finales",
+        "description": "Gastos médicos y hospitalarios no cubiertos"
+      },
+      {
+        "title": "Gastos Adicionales",
+        "description": "Flores, prendas de vestir, avisos en periódico y otros gastos"
+      }
+    ],
+    "stats": [
+      {
+        "number": "0-85",
+        "label": "Años de edad elegibles"
+      },
+      {
+        "number": "$30K",
+        "label": "Cobertura máxima"
+      },
+      {
+        "number": "24h",
+        "label": "Pago de reclamos"
+      }
+    ]
+  },
+  
+  "faq_section": {
+    "title": "Preguntas Frecuentes",
+    "subtitle": "Resuelve tus dudas sobre nuestro seguro de gastos finales",
+    "faqs": [
+      {
+        "question": "¿En cuánto tiempo me contactan?",
+        "answer": "En promedio entre 5 y 30 segundos después de completar el formulario. Nuestros agentes especializados están disponibles para atenderte inmediatamente."
+      },
+      {
+        "question": "¿Necesito hacer un examen médico?",
+        "answer": "No, no se requiere examen médico. Solo necesitas responder pocas preguntas simples de salud. Casi todas las personas califican fácilmente."
+      },
+      {
+        "question": "¿Puedo recibir información por WhatsApp?",
+        "answer": "Sí, disponible como opción. Puedes elegir recibir la información por llamada telefónica o por WhatsApp, según tu preferencia."
+      },
+      {
+        "question": "¿Cuáles son los montos de cobertura disponibles?",
+        "answer": "Ofrecemos cobertura de seguro de vida entera hasta $30,000. El monto exacto dependerá de tu edad, salud y necesidades específicas."
+      },
+      {
+        "question": "¿Las primas pueden aumentar con el tiempo?",
+        "answer": "No, las primas son fijas y nunca aumentan. Los beneficios tampoco disminuyen. Es protección garantizada de por vida."
+      },
+      {
+        "question": "¿Puedo perder mi póliza por cambios de salud o edad?",
+        "answer": "No, siempre y cuando hagas tus pagos a tiempo, no puedes perder esta protección por edad o cambios en la salud que ocurran después de que tu póliza entre en vigor."
+      }
+    ]
+  },
+  
+  "testimonials_section": {
+    "title": "Lo Que Dicen Nuestros Clientes",
+    "subtitle": "Testimonios reales de familias que han encontrado tranquilidad con nuestro seguro",
+    "testimonials": [
+      {
+        "text": "Gracias a Synapleads, encontré el seguro perfecto para proteger a mi familia. El proceso fue rápido y sin complicaciones.",
+        "author": "María González",
+        "location": "Houston, TX",
+        "rating": 5
+      },
+      {
+        "text": "Los agentes me explicaron todo claramente. Ahora tengo la tranquilidad de saber que mi familia estará protegida.",
+        "author": "Carlos Rodríguez", 
+        "location": "Miami, FL",
+        "rating": 5
+      },
+      {
+        "text": "Sin examen médico y con pagos que puedo manejar. Exactamente lo que necesitaba para mi presupuesto.",
+        "author": "Ana Martínez",
+        "location": "Los Angeles, CA", 
+        "rating": 5
+      }
+    ]
+  },
+  
+  "final_cta": {
+    "title": "¿Listo Para Proteger a Tu Familia?",
+    "description": "No esperes más. Obtén tu cotización gratuita y asegura la tranquilidad de tu familia con nuestro seguro de gastos finales.",
+    "buttons": {
+      "primary": "Llamar Ahora - Conexión Inmediata",
+      "secondary": "Completar Formulario"
+    },
+    "guarantees": [
+      {
+        "icon": "fas fa-shield-alt",
+        "text": "Información 100% confidencial"
+      },
+      {
+        "icon": "fas fa-clock",
+        "text": "Respuesta en menos de 30 segundos"
+      },
+      {
+        "icon": "fas fa-gift",
+        "text": "Cotización completamente gratis"
+      }
+    ]
+  },
+  
+  "editable_settings": {
+    "color_scheme": {
+      "primary": "#00D1B2",
+      "secondary": "#FBBF24", 
+      "dark": "#1C1C1E"
+    },
+    "contact_preferences": {
+      "show_phone": true,
+      "show_whatsapp": true,
+      "show_email": true,
+      "default_contact_method": "phone"
+    },
+    "form_settings": {
+      "required_fields": ["nombre", "telefono", "estado", "edad"],
+      "optional_fields": ["contacto"],
+      "enable_age_restriction": true,
+      "min_age": 40,
+      "max_age": 85
+    },
+    "tracking": {
+      "enable_ga4": true,
+      "enable_meta_pixel": true,
+      "enable_form_tracking": true,
+      "enable_cta_tracking": true
+    }
+  }
+}

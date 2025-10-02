@@ -1,0 +1,54 @@
+{
+  "privacy": {
+    "title": "Política de Privacidad",
+    "last_updated": "2025-01-01",
+    "sections": [
+      {
+        "title": "Información que Recopilamos",
+        "content": "Recopilamos información que nos proporcionas directamente, como nombre, número de teléfono, estado y edad cuando solicitas información sobre nuestros servicios de seguros."
+      },
+      {
+        "title": "Uso de la Información",
+        "content": "Utilizamos tu información para conectarte con agentes de seguros especializados y proporcionarte información relevante sobre seguros de gastos finales."
+      },
+      {
+        "title": "Compartir Información",
+        "content": "Podemos compartir tu información con agentes de seguros autorizados y compañías de seguros para proporcionarte cotizaciones y servicios."
+      },
+      {
+        "title": "Seguridad",
+        "content": "Implementamos medidas de seguridad apropiadas para proteger tu información personal contra acceso no autorizado, alteración, divulgación o destrucción."
+      },
+      {
+        "title": "Contacto",
+        "content": "Si tienes preguntas sobre esta política de privacidad, puedes contactarnos en admin@synapleads.com"
+      }
+    ]
+  },
+  "terms": {
+    "title": "Términos y Condiciones",
+    "last_updated": "2025-01-01",
+    "sections": [
+      {
+        "title": "Aceptación de Términos",
+        "content": "Al utilizar este sitio web y solicitar información, aceptas estar sujeto a estos términos y condiciones."
+      },
+      {
+        "title": "Servicios Proporcionados",
+        "content": "Synapleads es un servicio de generación de leads que conecta a consumidores interesados con agentes de seguros autorizados."
+      },
+      {
+        "title": "Responsabilidades del Usuario",
+        "content": "Te comprometes a proporcionar información precisa y actualizada cuando solicites información sobre seguros."
+      },
+      {
+        "title": "Limitación de Responsabilidad",
+        "content": "Synapleads actúa como intermediario y no es responsable de las pólizas de seguros o servicios proporcionados por terceros agentes o compañías de seguros."
+      },
+      {
+        "title": "Modificaciones",
+        "content": "Nos reservamos el derecho de modificar estos términos en cualquier momento. Las modificaciones serán efectivas inmediatamente después de su publicación."
+      }
+    ]
+  }
+}

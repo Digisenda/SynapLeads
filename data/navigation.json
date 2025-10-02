@@ -1,0 +1,58 @@
+{
+  "main_navigation": [
+    {
+      "title": "Inicio",
+      "url": "/",
+      "active": false
+    },
+    {
+      "title": "Seguros Gastos Finales",
+      "url": "/landing-seguros.html",
+      "active": false
+    },
+    {
+      "title": "Contacto",
+      "url": "#contact",
+      "active": false
+    }
+  ],
+  "footer_navigation": {
+    "company": [
+      {
+        "title": "Inicio",
+        "url": "/"
+      },
+      {
+        "title": "Seguros Gastos Finales", 
+        "url": "/seguros-gastos-finales.html"
+      }
+    ],
+    "legal": [
+      {
+        "title": "Política de Privacidad",
+        "url": "/privacidad.html"
+      },
+      {
+        "title": "Términos y Condiciones",
+        "url": "/terminos.html"
+      }
+    ],
+    "social": [
+      {
+        "title": "Facebook",
+        "url": "#",
+        "icon": "fab fa-facebook-f"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "#", 
+        "icon": "fab fa-linkedin-in"
+      },
+      {
+        "title": "Twitter",
+        "url": "#",
+        "icon": "fab fa-twitter"
+      }
+    ]
+  }
+}
