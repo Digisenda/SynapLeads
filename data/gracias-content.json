@@ -1,0 +1,132 @@
+{
+  "page_meta": {
+    "title": "¡Gracias! - Synapleads | Su solicitud ha sido recibida",
+    "description": "Su solicitud de información sobre seguros de gastos finales ha sido recibida. Un agente se pondrá en contacto pronto.",
+    "keywords": "gracias, solicitud recibida, seguros gastos finales, synapleads"
+  },
+  "success_section": {
+    "icon_class": "fas fa-check-circle",
+    "main_title": "¡Gracias por su solicitud!",
+    "subtitle": "Su información ha sido recibida correctamente. Un agente especializado se pondrá en contacto con usted muy pronto."
+  },
+  "countdown_section": {
+    "title": "Tiempo estimado de contacto",
+    "initial_minutes": 5,
+    "initial_seconds": 0,
+    "description": "En promedio, nuestros agentes contactan en <strong>menos de 5 minutos</strong>",
+    "completion_message": "¡Su turno ha llegado! Un agente debe estar contactándolo ahora."
+  },
+  "contact_info": {
+    "title": "Información de contacto recibida:",
+    "fields": [
+      {
+        "icon": "fas fa-user",
+        "label": "Nombre",
+        "display_id": "display-name"
+      },
+      {
+        "icon": "fas fa-phone",
+        "label": "Teléfono",
+        "display_id": "display-phone"
+      },
+      {
+        "icon": "fas fa-map-marker-alt",
+        "label": "Estado",
+        "display_id": "display-state"
+      }
+    ]
+  },
+  "trust_stats": [
+    {
+      "number": "50K+",
+      "label": "Familias protegidas"
+    },
+    {
+      "number": "24h",
+      "label": "Servicio de reclamos"
+    },
+    {
+      "number": "98%",
+      "label": "Satisfacción del cliente"
+    }
+  ],
+  "next_steps": {
+    "title": "¿Qué sigue ahora?",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Llamada de confirmación",
+        "description": "Un agente certificado se pondrá en contacto para confirmar su información y responder sus preguntas."
+      },
+      {
+        "number": "2",
+        "title": "Evaluación personalizada",
+        "description": "Revisaremos sus necesidades específicas y le presentaremos las mejores opciones de cobertura."
+      },
+      {
+        "number": "3",
+        "title": "Protección asegurada",
+        "description": "Complete su aplicación y obtenga la tranquilidad de saber que su familia estará protegida."
+      }
+    ]
+  },
+  "alternative_contact": {
+    "title": "¿Prefiere contactarnos usted?",
+    "buttons": [
+      {
+        "text": "Llamar ahora",
+        "icon": "fas fa-phone",
+        "class": "btn-primary",
+        "action": "call",
+        "id": "call-btn"
+      },
+      {
+        "text": "WhatsApp",
+        "icon": "fab fa-whatsapp",
+        "class": "btn-secondary",
+        "action": "whatsapp",
+        "id": "whatsapp-btn"
+      }
+    ],
+    "hours": "Horario de atención: Lunes a Viernes 8:00 AM - 8:00 PM EST"
+  },
+  "important_info": {
+    "icon": "fas fa-shield-alt",
+    "title": "Su información está segura",
+    "description": "Cumplimos con todas las regulaciones de privacidad y no compartimos su información con terceros no autorizados."
+  },
+  "navigation": {
+    "back_link": {
+      "text": "Volver al inicio",
+      "icon": "fas fa-arrow-left",
+      "url": "index.html"
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 Synapleads. Todos los derechos reservados.",
+    "links": [
+      {
+        "text": "Política de Privacidad",
+        "url": "privacidad.html"
+      },
+      {
+        "text": "Términos de Uso",
+        "url": "terminos.html"
+      }
+    ]
+  },
+  "settings": {
+    "auto_redirect_time_minutes": 10,
+    "countdown_completion_actions": {
+      "show_notification": true,
+      "change_message": true,
+      "add_visual_indicator": true
+    },
+    "tracking": {
+      "page_interactions": true,
+      "scroll_tracking": true,
+      "contact_button_clicks": true,
+      "countdown_completion": true
+    }
+  }
+}
