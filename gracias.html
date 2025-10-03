@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Gracias! - Synapleads | Su solicitud ha sido recibida</title>
+    <meta name="description" content="Su solicitud de información sobre seguros de gastos finales ha sido recibida. Un agente se pondrá en contacto pronto.">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/gracias.css">
+    
+    <!-- Analytics & Tracking -->
+    <script>
+        // Google Analytics 4
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+        
+        // Track thank you page view
+        gtag('event', 'page_view', {
+            page_title: 'Gracias - Solicitud Recibida',
+            page_location: window.location.href,
+            event_category: 'conversion'
+        });
+        
+        // Track conversion event
+        gtag('event', 'conversion', {
+            send_to: 'GA_MEASUREMENT_ID/CONVERSION_ID'
+        });
+    </script>
+    
+    <!-- Meta Pixel -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'META_PIXEL_ID');
+        fbq('track', 'PageView');
+        fbq('track', 'Lead');
+    </script>
+</head>
+<body>
+    <!-- Header simplificado -->
+    <header class="header-simple">
+        <div class="container">
+            <div class="logo">
+                <img src="images/synapleads-logo.png" alt="Synapleads" class="logo-img">
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="thank-you-wrapper">
+                
+                <!-- Success Icon & Message -->
+                <div class="success-section">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h1 class="main-title">¡Gracias por su solicitud!</h1>
+                    <p class="subtitle">Su información ha sido recibida correctamente. Un agente especializado se pondrá en contacto con usted muy pronto.</p>
+                </div>
+
+                <!-- Countdown Timer -->
+                <div class="countdown-section">
+                    <div class="countdown-container">
+                        <h2>Tiempo estimado de contacto</h2>
+                        <div class="countdown-display">
+                            <div class="time-unit">
+                                <span class="time-number" id="minutes">05</span>
+                                <span class="time-label">minutos</span>
+                            </div>
+                            <div class="time-separator">:</div>
+                            <div class="time-unit">
+                                <span class="time-number" id="seconds">00</span>
+                                <span class="time-label">segundos</span>
+                            </div>
+                        </div>
+                        <p class="countdown-text">En promedio, nuestros agentes contactan en <strong>menos de 5 minutos</strong></p>
+                    </div>
+                </div>
+
+                <!-- Contact Info Display -->
+                <div class="contact-info-section">
+                    <h3>Información de contacto recibida:</h3>
+                    <div class="info-display">
+                        <div class="info-item">
+                            <i class="fas fa-user"></i>
+                            <span id="display-name">---</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <span id="display-phone">---</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span id="display-state">---</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trust Elements -->
+                <div class="trust-section">
+                    <div class="trust-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">50K+</div>
+                            <div class="stat-label">Familias protegidas</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">24h</div>
+                            <div class="stat-label">Servicio de reclamos</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">98%</div>
+                            <div class="stat-label">Satisfacción del cliente</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- What Happens Next -->
+                <div class="next-steps-section">
+                    <h3>¿Qué sigue ahora?</h3>
+                    <div class="steps-grid">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Llamada de confirmación</h4>
+                                <p>Un agente certificado se pondrá en contacto para confirmar su información y responder sus preguntas.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Evaluación personalizada</h4>
+                                <p>Revisaremos sus necesidades específicas y le presentaremos las mejores opciones de cobertura.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Protección asegurada</h4>
+                                <p>Complete su aplicación y obtenga la tranquilidad de saber que su familia estará protegida.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Contact Options -->
+                <div class="alternative-contact">
+                    <h3>¿Prefiere contactarnos usted?</h3>
+                    <div class="contact-buttons">
+                        <a href="tel:+1234567890" class="btn btn-primary" id="call-btn">
+                            <i class="fas fa-phone"></i>
+                            Llamar ahora
+                        </a>
+                        <a href="https://wa.me/1234567890" class="btn btn-secondary" id="whatsapp-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            WhatsApp
+                        </a>
+                    </div>
+                    <p class="contact-hours">Horario de atención: Lunes a Viernes 8:00 AM - 8:00 PM EST</p>
+                </div>
+
+                <!-- Important Information -->
+                <div class="important-info">
+                    <div class="info-box">
+                        <i class="fas fa-shield-alt"></i>
+                        <div class="info-content">
+                            <h4>Su información está segura</h4>
+                            <p>Cumplimos con todas las regulaciones de privacidad y no compartimos su información con terceros no autorizados.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Return to Home -->
+                <div class="navigation-section">
+                    <a href="index.html" class="back-link">
+                        <i class="fas fa-arrow-left"></i>
+                        Volver al inicio
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer simplificado -->
+    <footer class="footer-simple">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Synapleads. Todos los derechos reservados.</p>
+                <div class="footer-links">
+                    <a href="privacidad.html">Política de Privacidad</a>
+                    <a href="terminos.html">Términos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/gracias.js"></script>
+    
+    <!-- Auto-redirect after certain time (optional) -->
+    <script>
+        // Optional: Redirect to home after 10 minutes of inactivity
+        setTimeout(() => {
+            if (confirm('¿Desea volver a la página principal?')) {
+                window.location.href = 'index.html';
+            }
+        }, 600000); // 10 minutes
+    </script>
+</body>
+</html>
