@@ -1,54 +1,92 @@
 {
   "privacy": {
     "title": "Política de Privacidad",
-    "last_updated": "2025-01-01",
+    "lastUpdated": "Enero 2025",
     "sections": [
       {
         "title": "Información que Recopilamos",
-        "content": "Recopilamos información que nos proporcionas directamente, como nombre, número de teléfono, estado y edad cuando solicitas información sobre nuestros servicios de seguros."
+        "content": "En Synapleads, recopilamos información personal que usted nos proporciona voluntariamente cuando solicita información sobre seguros de gastos finales, incluidos:\n\n• Nombre completo\n• Número de teléfono\n• Dirección de correo electrónico\n• Estado de residencia\n• Rango de edad\n• Preferencias de contacto\n\nTambién recopilamos automáticamente cierta información cuando visita nuestro sitio web, como dirección IP, tipo de navegador, páginas visitadas y tiempo de permanencia."
       },
       {
-        "title": "Uso de la Información",
-        "content": "Utilizamos tu información para conectarte con agentes de seguros especializados y proporcionarte información relevante sobre seguros de gastos finales."
+        "title": "Cómo Utilizamos Su Información",
+        "content": "Utilizamos la información personal recopilada para:\n\n• Conectarlo con agentes de seguros calificados\n• Proporcionar información sobre productos de seguros\n• Procesar sus solicitudes de cotización\n• Comunicarnos con usted sobre nuestros servicios\n• Mejorar nuestros servicios y experiencia del usuario\n• Cumplir con requisitos legales y regulatorios\n\nNo vendemos, alquilamos o compartimos su información personal con terceros para fines de marketing sin su consentimiento explícito."
       },
       {
         "title": "Compartir Información",
-        "content": "Podemos compartir tu información con agentes de seguros autorizados y compañías de seguros para proporcionarte cotizaciones y servicios."
+        "content": "Podemos compartir su información personal únicamente en las siguientes circunstancias:\n\n• Con agentes de seguros autorizados para proporcionarle cotizaciones\n• Con proveedores de servicios que nos ayudan a operar nuestro negocio\n• Cuando sea requerido por ley o proceso legal\n• Para proteger nuestros derechos, privacidad, seguridad o propiedad\n• En caso de fusión, adquisición o venta de activos\n\nTodos los terceros están obligados contractualmente a mantener la confidencialidad de su información."
       },
       {
-        "title": "Seguridad",
-        "content": "Implementamos medidas de seguridad apropiadas para proteger tu información personal contra acceso no autorizado, alteración, divulgación o destrucción."
+        "title": "Seguridad de Datos",
+        "content": "Implementamos medidas de seguridad técnicas, administrativas y físicas apropiadas para proteger su información personal contra acceso no autorizado, alteración, divulgación o destrucción.\n\nSin embargo, ningún método de transmisión por Internet o almacenamiento electrónico es 100% seguro. No podemos garantizar la seguridad absoluta de su información."
       },
       {
-        "title": "Contacto",
-        "content": "Si tienes preguntas sobre esta política de privacidad, puedes contactarnos en admin@synapleads.com"
+        "title": "Sus Derechos",
+        "content": "Usted tiene los siguientes derechos con respecto a su información personal:\n\n• Acceder a la información que tenemos sobre usted\n• Solicitar corrección de información inexacta\n• Solicitar eliminación de su información\n• Oponerse al procesamiento de su información\n• Retirar el consentimiento en cualquier momento\n\nPara ejercer estos derechos, contáctenos en admin@synapleads.com"
+      },
+      {
+        "title": "Cookies y Tecnologías de Seguimiento",
+        "content": "Utilizamos cookies y tecnologías similares para:\n\n• Mejorar la funcionalidad del sitio web\n• Analizar el uso del sitio web\n• Personalizar su experiencia\n• Realizar seguimiento de conversiones publicitarias\n\nPuede controlar las cookies a través de la configuración de su navegador."
+      },
+      {
+        "title": "Cambios a Esta Política",
+        "content": "Podemos actualizar esta Política de Privacidad ocasionalmente. Le notificaremos sobre cambios significativos publicando la nueva política en nuestro sitio web con una fecha de actualización revisada.\n\nSu uso continuado de nuestros servicios después de dichos cambios constituye su aceptación de la política actualizada."
+      },
+      {
+        "title": "Contáctenos",
+        "content": "Si tiene preguntas sobre esta Política de Privacidad, contáctenos:\n\n• Email: admin@synapleads.com\n• Teléfono: Configurar en panel de administración\n• Dirección: San Antonio, TX, USA"
       }
     ]
   },
   "terms": {
-    "title": "Términos y Condiciones",
-    "last_updated": "2025-01-01",
+    "title": "Términos de Uso",
+    "lastUpdated": "Enero 2025",
     "sections": [
       {
         "title": "Aceptación de Términos",
-        "content": "Al utilizar este sitio web y solicitar información, aceptas estar sujeto a estos términos y condiciones."
+        "content": "Al acceder y usar este sitio web operado por Synapleads ('nosotros', 'nuestro', 'la empresa'), usted acepta estar sujeto a estos Términos de Uso.\n\nSi no está de acuerdo con alguna parte de estos términos, no debe usar nuestro sitio web o servicios."
       },
       {
-        "title": "Servicios Proporcionados",
-        "content": "Synapleads es un servicio de generación de leads que conecta a consumidores interesados con agentes de seguros autorizados."
+        "title": "Descripción de Servicios",
+        "content": "Synapleads proporciona servicios de generación de leads y conexión con agentes de seguros especializados en seguros de gastos finales.\n\nNuestros servicios incluyen:\n\n• Plataforma de conexión con agentes de seguros\n• Información sobre productos de seguros de gastos finales\n• Servicios de live transfer\n• Herramientas de nurturing inteligente\n\nNo somos una compañía de seguros y no vendemos pólizas de seguro directamente."
       },
       {
-        "title": "Responsabilidades del Usuario",
-        "content": "Te comprometes a proporcionar información precisa y actualizada cuando solicites información sobre seguros."
+        "title": "Elegibilidad y Registro",
+        "content": "Para usar nuestros servicios, usted debe:\n\n• Tener al menos 18 años de edad\n• Residir en los Estados Unidos\n• Proporcionar información precisa y completa\n• Mantener actualizada su información de contacto\n• Usar los servicios solo para fines legítimos\n\nNos reservamos el derecho de rechazar o terminar el servicio a cualquier persona por cualquier motivo."
+      },
+      {
+        "title": "Uso Aceptable",
+        "content": "Al usar nuestros servicios, usted se compromete a NO:\n\n• Proporcionar información falsa o engañosa\n• Usar el servicio para actividades ilegales\n• Interferir con el funcionamiento del sitio web\n• Intentar acceder a sistemas o datos no autorizados\n• Usar el servicio para spam o solicitudes no deseadas\n• Violar derechos de propiedad intelectual\n\nNos reservamos el derecho de suspender o terminar el acceso por violaciones."
+      },
+      {
+        "title": "Propiedad Intelectual",
+        "content": "Todo el contenido, diseño, logotipos, marcas comerciales y otros materiales en este sitio web son propiedad de Synapleads o sus licenciantes.\n\nUsted puede usar el sitio web para fines personales y no comerciales únicamente. No puede copiar, distribuir, modificar o crear trabajos derivados sin permiso escrito."
       },
       {
         "title": "Limitación de Responsabilidad",
-        "content": "Synapleads actúa como intermediario y no es responsable de las pólizas de seguros o servicios proporcionados por terceros agentes o compañías de seguros."
+        "content": "Synapleads actúa como intermediario entre clientes potenciales y agentes de seguros. No somos responsables de:\n\n• Las acciones u omisiones de agentes de seguros terceros\n• Los términos, condiciones o calidad de las pólizas de seguro\n• Disputas entre clientes y agentes de seguros\n• Pérdidas o daños resultantes del uso de nuestros servicios\n\nNuestros servicios se proporcionan 'tal como están' sin garantías de ningún tipo."
       },
       {
-        "title": "Modificaciones",
-        "content": "Nos reservamos el derecho de modificar estos términos en cualquier momento. Las modificaciones serán efectivas inmediatamente después de su publicación."
+        "title": "Indemnización",
+        "content": "Usted acepta indemnizar y eximir de responsabilidad a Synapleads, sus empleados, directores y afiliados de cualquier reclamo, pérdida, daño, responsabilidad y gastos (incluidos honorarios de abogados) que surjan de:\n\n• Su uso de nuestros servicios\n• Su violación de estos términos\n• Su violación de derechos de terceros\n• Información falsa o engañosa que proporcione"
+      },
+      {
+        "title": "Modificaciones y Terminación",
+        "content": "Nos reservamos el derecho de:\n\n• Modificar estos términos en cualquier momento\n• Suspender o terminar servicios temporalmente\n• Terminar su acceso por violaciones\n• Cambiar o discontinuar características del servicio\n\nLos cambios entrarán en vigor al publicarse en este sitio web."
+      },
+      {
+        "title": "Ley Aplicable y Jurisdicción",
+        "content": "Estos términos se rigen por las leyes del Estado de Texas, Estados Unidos.\n\nCualquier disputa será resuelta en los tribunales competentes de San Antonio, Texas.\n\nSi alguna disposición de estos términos se considera inválida, las disposiciones restantes permanecerán en pleno vigor y efecto."
+      },
+      {
+        "title": "Información de Contacto",
+        "content": "Para preguntas sobre estos Términos de Uso, contáctenos:\n\n• Email: admin@synapleads.com\n• Teléfono: Configurar en panel de administración\n• Dirección: San Antonio, TX, USA\n\nÚltima actualización: Enero 2025"
       }
     ]
+  },
+  "config": {
+    "companyName": "Synapleads",
+    "email": "admin@synapleads.com",
+    "address": "San Antonio, TX, USA",
+    "phone": "Configurar en panel de administración"
   }
 }
