@@ -1,34 +1,49 @@
 {
-  "site": {
-    "name": "Synapleads",
-    "tagline": "Conecta leads con agentes reales en segundos",
-    "description": "La forma más rápida y confiable de escalar tu negocio de seguros",
-    "url": "https://synapleads.com",
-    "logo": "assets/images/logo.png",
-    "favicon": "assets/images/favicon.ico"
-  },
+  "siteName": "Synapleads",
+  "tagline": "Conecta leads con agentes reales en segundos",
+  "description": "La forma más rápida y confiable de escalar tu negocio de seguros de gastos finales",
   "colors": {
-    "primary": "#1C1C1E",
-    "secondary": "#00D1B2", 
-    "accent": "#FBBF24",
-    "white": "#FFFFFF",
-    "gray_light": "#F8F9FA",
-    "gray_dark": "#6C757D"
+    "grafito": "#1C1C1E",
+    "turquesa": "#00D1B2",
+    "dorado": "#FBBF24",
+    "gris_claro": "#F3F4F6",
+    "gris_medio": "#6B7280",
+    "blanco": "#FFFFFF"
   },
   "contact": {
-    "phone": "+1-800-SYNAPSE",
-    "whatsapp": "+1-800-SYNAPSE",
+    "phone": "+1 (555) 123-4567",
+    "whatsapp": "+1 (555) 123-4567",
     "email": "admin@synapleads.com",
-    "address": "San Antonio, TX, USA"
+    "address": "San Antonio, TX, USA",
+    "business_hours": "Lunes a Viernes, 9:00 AM - 6:00 PM CST"
   },
-  "tracking": {
+  "analytics": {
     "ga4_id": "",
     "meta_pixel_id": "",
-    "enable_tracking": true
+    "gtm_id": ""
   },
-  "forms": {
-    "lead_endpoint": "",
-    "webhook_url": "",
-    "notification_email": "admin@synapleads.com"
+  "social": {
+    "facebook": "",
+    "twitter": "",
+    "linkedin": "",
+    "instagram": ""
+  },
+  "seo": {
+    "meta_description": "Genera leads calificados para seguros de gastos finales con live transfer inmediato. Más de 50,000 familias protegidas.",
+    "keywords": "seguros gastos finales, live transfer, leads seguros, protección familiar, cobertura sin examen",
+    "author": "Synapleads",
+    "og_image": "images/og-image.jpg"
+  },
+  "features": {
+    "live_transfer": true,
+    "whatsapp_integration": true,
+    "multi_language": false,
+    "chat_widget": false
+  },
+  "legal": {
+    "company_name": "Synapleads LLC",
+    "registration_state": "Texas",
+    "license_number": "",
+    "last_updated": "2025-01-01"
   }
 }

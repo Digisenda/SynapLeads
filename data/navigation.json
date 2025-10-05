@@ -1,58 +1,209 @@
 {
   "main_navigation": [
     {
-      "title": "Inicio",
-      "url": "/",
-      "active": false
+      "id": "home",
+      "text": "Inicio",
+      "url": "index.html",
+      "target": "_self",
+      "order": 1,
+      "active": true,
+      "icon": "fas fa-home",
+      "description": "Página principal de Synapleads"
     },
     {
-      "title": "Seguros Gastos Finales",
-      "url": "/landing-seguros.html",
-      "active": false
+      "id": "seguros",
+      "text": "Seguros",
+      "url": "landing-seguros.html", 
+      "target": "_self",
+      "order": 2,
+      "active": true,
+      "icon": "fas fa-shield-alt",
+      "description": "Información sobre seguros de gastos finales"
     },
     {
-      "title": "Contacto",
+      "id": "contacto",
+      "text": "Contacto",
       "url": "#contact",
-      "active": false
+      "target": "_self", 
+      "order": 3,
+      "active": true,
+      "icon": "fas fa-phone",
+      "description": "Información de contacto"
+    },
+    {
+      "id": "nosotros",
+      "text": "Nosotros",
+      "url": "#about",
+      "target": "_self",
+      "order": 4,
+      "active": false,
+      "icon": "fas fa-users",
+      "description": "Acerca de Synapleads"
     }
   ],
-  "footer_navigation": {
-    "company": [
-      {
-        "title": "Inicio",
-        "url": "/"
-      },
-      {
-        "title": "Seguros Gastos Finales", 
-        "url": "/seguros-gastos-finales.html"
-      }
+  
+  "footer_navigation": [
+    {
+      "section": "Servicios",
+      "items": [
+        {
+          "text": "Live Transfer",
+          "url": "landing-seguros.html",
+          "target": "_self"
+        },
+        {
+          "text": "Leads Calificados",
+          "url": "landing-seguros.html#benefits",
+          "target": "_self"
+        },
+        {
+          "text": "Seguros de Gastos Finales",
+          "url": "landing-seguros.html",
+          "target": "_self"
+        }
+      ]
+    },
+    {
+      "section": "Empresa",
+      "items": [
+        {
+          "text": "Acerca de Nosotros",
+          "url": "#about",
+          "target": "_self"
+        },
+        {
+          "text": "Contacto",
+          "url": "#contact", 
+          "target": "_self"
+        },
+        {
+          "text": "Testimonios",
+          "url": "index.html#testimonios",
+          "target": "_self"
+        }
+      ]
+    },
+    {
+      "section": "Legal",
+      "items": [
+        {
+          "text": "Política de Privacidad",
+          "url": "privacidad.html",
+          "target": "_self"
+        },
+        {
+          "text": "Términos de Uso",
+          "url": "terminos.html",
+          "target": "_self"
+        },
+        {
+          "text": "Disclaimer",
+          "url": "#disclaimer",
+          "target": "_self"
+        }
+      ]
+    },
+    {
+      "section": "Soporte",
+      "items": [
+        {
+          "text": "Preguntas Frecuentes",
+          "url": "landing-seguros.html#faq",
+          "target": "_self"
+        },
+        {
+          "text": "Centro de Ayuda",
+          "url": "#help",
+          "target": "_self"
+        },
+        {
+          "text": "Reportar Problema",
+          "url": "#report",
+          "target": "_self"
+        }
+      ]
+    }
+  ],
+  
+  "mobile_navigation": [
+    {
+      "text": "Inicio",
+      "url": "index.html",
+      "icon": "fas fa-home"
+    },
+    {
+      "text": "Seguros",
+      "url": "landing-seguros.html",
+      "icon": "fas fa-shield-alt"
+    },
+    {
+      "text": "Llamar",
+      "url": "tel:+15551234567",
+      "icon": "fas fa-phone"
+    },
+    {
+      "text": "WhatsApp", 
+      "url": "https://wa.me/15551234567",
+      "icon": "fab fa-whatsapp"
+    }
+  ],
+  
+  "breadcrumb_templates": {
+    "home": [
+      { "text": "Inicio", "url": "index.html" }
+    ],
+    "seguros": [
+      { "text": "Inicio", "url": "index.html" },
+      { "text": "Seguros de Gastos Finales", "url": "landing-seguros.html" }
+    ],
+    "gracias": [
+      { "text": "Inicio", "url": "index.html" },
+      { "text": "Seguros", "url": "landing-seguros.html" },
+      { "text": "Gracias", "url": "gracias.html" }
     ],
     "legal": [
-      {
-        "title": "Política de Privacidad",
-        "url": "/privacidad.html"
-      },
-      {
-        "title": "Términos y Condiciones",
-        "url": "/terminos.html"
-      }
-    ],
-    "social": [
-      {
-        "title": "Facebook",
-        "url": "#",
-        "icon": "fab fa-facebook-f"
-      },
-      {
-        "title": "LinkedIn",
-        "url": "#", 
-        "icon": "fab fa-linkedin-in"
-      },
-      {
-        "title": "Twitter",
-        "url": "#",
-        "icon": "fab fa-twitter"
-      }
+      { "text": "Inicio", "url": "index.html" },
+      { "text": "Legal", "url": "#" }
     ]
+  },
+  
+  "cta_buttons": {
+    "primary": {
+      "text": "Solicitar Información",
+      "url": "landing-seguros.html",
+      "style": "primary",
+      "tracking": "cta_primary"
+    },
+    "secondary": {
+      "text": "Llamar Ahora", 
+      "url": "tel:+15551234567",
+      "style": "secondary",
+      "tracking": "cta_phone"
+    },
+    "whatsapp": {
+      "text": "WhatsApp",
+      "url": "https://wa.me/15551234567",
+      "style": "whatsapp",
+      "tracking": "cta_whatsapp"
+    }
+  },
+  
+  "admin_navigation": [
+    {
+      "text": "Panel Admin",
+      "url": "admin/",
+      "visible": false,
+      "protected": true
+    }
+  ],
+  
+  "settings": {
+    "show_breadcrumbs": true,
+    "sticky_header": true,
+    "mobile_menu_style": "hamburger",
+    "search_enabled": false,
+    "language_selector": false,
+    "social_links_in_header": false,
+    "cta_in_header": true
   }
 }

@@ -1,132 +1,125 @@
 {
-  "page_meta": {
-    "title": "¡Gracias! - Synapleads | Su solicitud ha sido recibida",
-    "description": "Su solicitud de información sobre seguros de gastos finales ha sido recibida. Un agente se pondrá en contacto pronto.",
-    "keywords": "gracias, solicitud recibida, seguros gastos finales, synapleads"
+  "title": "¡Gracias por tu Solicitud!",
+  "subtitle": "Hemos recibido tu información. Un agente especializado se pondrá en contacto contigo muy pronto.",
+  "countdown_minutes": 5,
+  "countdown_message": "Tiempo estimado de contacto:",
+  "completion_message": "¡Tu tiempo de espera ha terminado! Si aún no te han contactado, usa los botones de abajo.",
+  
+  "user_info_section": {
+    "title": "Información Recibida",
+    "show_name": true,
+    "show_phone": true,
+    "show_state": true,
+    "confirmation_number": true
   },
-  "success_section": {
-    "icon_class": "fas fa-check-circle",
-    "main_title": "¡Gracias por su solicitud!",
-    "subtitle": "Su información ha sido recibida correctamente. Un agente especializado se pondrá en contacto con usted muy pronto."
-  },
-  "countdown_section": {
-    "title": "Tiempo estimado de contacto",
-    "initial_minutes": 5,
-    "initial_seconds": 0,
-    "description": "En promedio, nuestros agentes contactan en <strong>menos de 5 minutos</strong>",
-    "completion_message": "¡Su turno ha llegado! Un agente debe estar contactándolo ahora."
-  },
-  "contact_info": {
-    "title": "Información de contacto recibida:",
-    "fields": [
-      {
-        "icon": "fas fa-user",
-        "label": "Nombre",
-        "display_id": "display-name"
-      },
-      {
-        "icon": "fas fa-phone",
-        "label": "Teléfono",
-        "display_id": "display-phone"
-      },
-      {
-        "icon": "fas fa-map-marker-alt",
-        "label": "Estado",
-        "display_id": "display-state"
-      }
-    ]
-  },
+  
+  "next_steps": [
+    {
+      "step_number": "1",
+      "title": "Análisis de tu solicitud",
+      "description": "Nuestro sistema está revisando tu información para encontrar las mejores opciones de cobertura para tu situación específica.",
+      "icon": "fas fa-search"
+    },
+    {
+      "step_number": "2", 
+      "title": "Contacto personalizado",
+      "description": "Un agente especializado certificado te llamará para explicar todas las opciones disponibles y resolver cualquier pregunta.",
+      "icon": "fas fa-phone-alt"
+    },
+    {
+      "step_number": "3",
+      "title": "Protección activada",
+      "description": "Una vez que elijas tu plan, tu familia quedará protegida con la cobertura que mejor se adapte a tus necesidades.",
+      "icon": "fas fa-shield-alt"
+    }
+  ],
+  
   "trust_stats": [
     {
       "number": "50K+",
-      "label": "Familias protegidas"
+      "label": "Familias Protegidas",
+      "description": "Miles de familias ya confían en nuestra protección"
     },
     {
       "number": "24h",
-      "label": "Servicio de reclamos"
+      "label": "Reclamos Procesados",
+      "description": "Procesamos reclamos rápidamente cuando más lo necesitas"  
     },
     {
       "number": "98%",
-      "label": "Satisfacción del cliente"
+      "label": "Satisfacción",
+      "description": "Nuestros clientes recomiendan nuestros servicios"
     }
   ],
-  "next_steps": {
-    "title": "¿Qué sigue ahora?",
-    "steps": [
-      {
-        "number": "1",
-        "title": "Llamada de confirmación",
-        "description": "Un agente certificado se pondrá en contacto para confirmar su información y responder sus preguntas."
-      },
-      {
-        "number": "2",
-        "title": "Evaluación personalizada",
-        "description": "Revisaremos sus necesidades específicas y le presentaremos las mejores opciones de cobertura."
-      },
-      {
-        "number": "3",
-        "title": "Protección asegurada",
-        "description": "Complete su aplicación y obtenga la tranquilidad de saber que su familia estará protegida."
-      }
-    ]
-  },
-  "alternative_contact": {
-    "title": "¿Prefiere contactarnos usted?",
-    "buttons": [
-      {
-        "text": "Llamar ahora",
-        "icon": "fas fa-phone",
-        "class": "btn-primary",
-        "action": "call",
-        "id": "call-btn"
-      },
-      {
-        "text": "WhatsApp",
-        "icon": "fab fa-whatsapp",
-        "class": "btn-secondary",
-        "action": "whatsapp",
-        "id": "whatsapp-btn"
-      }
-    ],
-    "hours": "Horario de atención: Lunes a Viernes 8:00 AM - 8:00 PM EST"
-  },
-  "important_info": {
-    "icon": "fas fa-shield-alt",
-    "title": "Su información está segura",
-    "description": "Cumplimos con todas las regulaciones de privacidad y no compartimos su información con terceros no autorizados."
-  },
-  "navigation": {
-    "back_link": {
-      "text": "Volver al inicio",
-      "icon": "fas fa-arrow-left",
-      "url": "index.html"
-    }
-  },
-  "footer": {
-    "copyright": "© 2024 Synapleads. Todos los derechos reservados.",
-    "links": [
-      {
-        "text": "Política de Privacidad",
-        "url": "privacidad.html"
-      },
-      {
-        "text": "Términos de Uso",
-        "url": "terminos.html"
-      }
-    ]
-  },
-  "settings": {
-    "auto_redirect_time_minutes": 10,
-    "countdown_completion_actions": {
-      "show_notification": true,
-      "change_message": true,
-      "add_visual_indicator": true
+  
+  "contact_options": {
+    "title": "¿Necesitas contactarnos directamente?",
+    "subtitle": "Estamos aquí para ayudarte",
+    "phone": {
+      "display": "Llamar Ahora",
+      "action_text": "Llamar Directamente", 
+      "available": "Disponible 24/7"
     },
-    "tracking": {
-      "page_interactions": true,
-      "scroll_tracking": true,
-      "contact_button_clicks": true,
-      "countdown_completion": true
+    "whatsapp": {
+      "display": "WhatsApp",
+      "action_text": "Enviar WhatsApp",
+      "available": "Respuesta inmediata"
     }
+  },
+  
+  "security_info": {
+    "title": "Tu Información Está Segura",
+    "points": [
+      "Cumplimos con todas las regulaciones TCPA",
+      "Tu información personal está encriptada y protegida", 
+      "Solo agentes certificados tendrán acceso a tus datos",
+      "Puedes solicitar la eliminación de tus datos en cualquier momento"
+    ],
+    "privacy_link": "privacidad.html",
+    "privacy_text": "Ver Política de Privacidad"
+  },
+  
+  "additional_info": {
+    "title": "Mientras Esperas...",
+    "content": [
+      {
+        "title": "¿Sabías que?",
+        "text": "El costo promedio de un funeral en Estados Unidos supera los $9,000. Un seguro de gastos finales asegura que tu familia no tenga que preocuparse por estos gastos."
+      },
+      {
+        "title": "Beneficios Adicionales", 
+        "text": "Además de cubrir gastos funerarios, tu póliza puede usarse para deudas médicas finales, gastos legales, o cualquier otra necesidad de tu familia."
+      }
+    ]
+  },
+  
+  "social_proof": {
+    "reviews_count": "2,847",
+    "average_rating": "4.9",
+    "recent_reviews": [
+      {
+        "name": "Ana M.",
+        "text": "Proceso súper rápido y fácil. Me llamaron en 2 minutos.",
+        "time": "Hace 15 minutos"
+      },
+      {
+        "name": "Roberto S.", 
+        "text": "Excelente atención. El agente fue muy profesional.",
+        "time": "Hace 32 minutos"
+      }
+    ]
+  },
+  
+  "referral": {
+    "title": "¿Conoces a alguien que también necesite protección?",
+    "subtitle": "Comparte esta información con familiares y amigos",
+    "share_text": "Protege a tu familia con seguros de gastos finales desde $5K hasta $30K sin examen médico",
+    "share_url": "landing-seguros.html",
+    "social_buttons": ["facebook", "whatsapp", "email"]
+  },
+  
+  "footer_message": {
+    "text": "Gracias por confiar en Synapleads para la protección de tu familia.",
+    "disclaimer": "Este no es un compromiso de compra. La información proporcionada es solo para fines educativos."
   }
 }

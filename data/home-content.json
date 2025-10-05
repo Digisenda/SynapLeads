@@ -1,47 +1,122 @@
 {
   "hero": {
     "title": "Conecta leads con agentes reales en segundos",
-    "subtitle": "La forma más rápida y confiable de escalar tu negocio de seguros",
-    "cta_text": "Solicitar Información",
-    "cta_url": "/seguros-gastos-finales.html",
-    "background_image": "assets/images/hero-bg.jpg"
+    "subtitle": "La forma más rápida y confiable de escalar tu negocio de seguros de gastos finales",
+    "cta_text": "Comenzar Ahora",
+    "cta_url": "landing-seguros.html",
+    "secondary_cta_text": "Llamar Ahora",
+    "stats": "50,000+ familias protegidas",
+    "badge": "✓ Live Transfer Inmediato",
+    "background_image": "images/hero-background.jpg"
   },
-  "services": {
-    "title": "Nuestros Servicios",
-    "subtitle": "Soluciones completas para tu negocio de seguros",
-    "items": [
-      {
-        "title": "Generación de Leads",
-        "description": "Leads calificados y listos para convertir en seguros de gastos finales",
-        "icon": "fas fa-users"
-      },
-      {
-        "title": "Live Transfer",
-        "description": "Conexión inmediata con leads interesados en menos de 30 segundos",
-        "icon": "fas fa-phone"
-      },
-      {
-        "title": "Nurturing Inteligente",
-        "description": "Seguimiento automatizado para maximizar las conversiones",
-        "icon": "fas fa-chart-line"
-      }
-    ]
-  },
-  "testimonials": {
-    "title": "Lo que dicen nuestros clientes",
-    "items": [
-      {
-        "text": "Gracias a Synapleads, aumentamos un 40% nuestras conversiones en solo 2 meses.",
-        "author": "María González",
-        "position": "Agente de Seguros",
-        "image": "assets/images/testimonial-1.jpg"
-      }
-    ]
-  },
+  "services": [
+    {
+      "title": "Live Transfer Inmediato",
+      "description": "Conectamos a tus leads con agentes especializados en menos de 30 segundos",
+      "icon": "fas fa-phone-alt",
+      "features": ["Conexión instantánea", "Agentes certificados", "24/7 disponible"]
+    },
+    {
+      "title": "Leads Calificados",
+      "description": "Leads pre-calificados específicamente para seguros de gastos finales",
+      "icon": "fas fa-users",
+      "features": ["Pre-calificados", "Intención real", "Datos verificados"]
+    },
+    {
+      "title": "Nurturing Inteligente",
+      "description": "Seguimiento automatizado para maximizar conversiones",
+      "icon": "fas fa-brain",
+      "features": ["Seguimiento automático", "Recordatorios", "Análisis de comportamiento"]
+    }
+  ],
+  "benefits": [
+    {
+      "title": "Conexión en Tiempo Real",
+      "description": "Tus leads hablan con un agente real en segundos, no en horas o días",
+      "icon": "fas fa-bolt",
+      "stats": "< 30 segundos promedio"
+    },
+    {
+      "title": "Mayor Tasa de Conversión",
+      "description": "Incrementa tus ventas hasta 40% con nuestro sistema optimizado",
+      "icon": "fas fa-chart-line",
+      "stats": "+40% conversión"
+    },
+    {
+      "title": "Cumplimiento TCPA",
+      "description": "100% cumplimiento con regulaciones de telecomunicaciones",
+      "icon": "fas fa-shield-alt",
+      "stats": "100% compliance"
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "María González",
+      "company": "Seguros Familiares TX",
+      "text": "Gracias a Synapleads, aumentamos un 40% nuestras conversiones en solo 2 meses. Los leads son de alta calidad y el servicio excepcional.",
+      "rating": 5,
+      "image": "images/testimonial-1.jpg"
+    },
+    {
+      "name": "Roberto Silva",
+      "company": "Protección Total",
+      "text": "El live transfer funciona perfectamente. Nuestros agentes reciben llamadas calificadas todo el día. Excelente ROI.",
+      "rating": 5,
+      "image": "images/testimonial-2.jpg"
+    },
+    {
+      "name": "Ana Martínez",
+      "company": "Seguros del Futuro",
+      "text": "La plataforma es intuitiva y los resultados inmediatos. Definitivamente recomiendo Synapleads a otras agencias.",
+      "rating": 5,
+      "image": "images/testimonial-3.jpg"
+    }
+  ],
+  "stats": [
+    {
+      "number": "50,000+",
+      "label": "Familias Protegidas",
+      "icon": "fas fa-users"
+    },
+    {
+      "number": "24h",
+      "label": "Reclamos Procesados",
+      "icon": "fas fa-clock"
+    },
+    {
+      "number": "98%",
+      "label": "Satisfacción Cliente",
+      "icon": "fas fa-star"
+    },
+    {
+      "number": "$30K",
+      "label": "Cobertura Máxima",
+      "icon": "fas fa-dollar-sign"
+    }
+  ],
   "cta_section": {
     "title": "¿Listo para escalar tu negocio?",
-    "subtitle": "Únete a cientos de agentes que ya confían en Synapleads",
-    "cta_text": "Comenzar Ahora",
-    "cta_url": "/seguros-gastos-finales.html"
-  }
+    "subtitle": "Comienza a recibir leads calificados hoy mismo",
+    "primary_cta": "Comenzar Ahora",
+    "secondary_cta": "Llamar para Información",
+    "guarantee": "✓ Sin compromiso inicial • ✓ Configuración gratuita • ✓ Soporte 24/7"
+  },
+  "features": [
+    {
+      "title": "Dashboard en Tiempo Real",
+      "description": "Monitorea tus leads, conversiones y métricas en tiempo real"
+    },
+    {
+      "title": "Integración CRM",
+      "description": "Se integra perfectamente con tu CRM existente"
+    },
+    {
+      "title": "Reportes Detallados",
+      "description": "Analíticas completas para optimizar tu rendimiento"
+    },
+    {
+      "title": "Soporte Especializado",
+      "description": "Equipo de expertos disponible para ayudarte a crecer"
+    }
+  ]
 }
