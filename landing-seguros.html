@@ -3,575 +3,269 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seguro de Gastos Finales - Protege a tu Familia | Synapleads</title>
-    <meta name="description" content="Seguro de vida entera para gastos finales. Sin examen médico, cobertura hasta $30,000. Protege a tu familia con pagos mensuales manejables.">
+    <title>Seguros de Gastos Finales - Live Transfer | SynapLeads</title>
+    <meta name="description" content="Protege a tu familia con seguros de gastos finales. Cobertura desde $5,000 hasta $30,000 sin examen médico. Contacto inmediato con agentes especializados.">
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <!-- SEO Tags -->
+    <meta property="og:title" content="Seguros de Gastos Finales - Live Transfer | SynapLeads">
+    <meta property="og:description" content="Protege a tu familia con seguros de gastos finales. Cobertura desde $5,000 hasta $30,000 sin examen médico.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://synapleads.com/landing-seguros.html">
     
-    <!-- CSS -->
+    <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/landing.css">
-    
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    
-    <!-- Tracking Scripts (Placeholder - will be loaded dynamically) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
     <header class="header" id="header">
-        <nav class="nav container">
-            <div class="nav__logo">
-                <img src="images/synapleads-logo.png" alt="Synapleads Logo" class="nav__logo-img">
-            </div>
-            
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#inicio" class="nav__link">Inicio</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#beneficios" class="nav__link">Beneficios</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#faq" class="nav__link">FAQ</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#solicitar" class="nav__link nav__link--cta">Solicitar Info</a>
-                    </li>
-                </ul>
-            </div>
-            
-            <div class="nav__toggle" id="nav-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
-        </nav>
+        <div class="container">
+            <nav class="nav">
+                <div class="nav-logo">
+                    <img src="images/logo-synapleads.png" alt="SynapLeads" class="logo" onerror="this.style.display='none'">
+                    <span class="logo-text">SynapLeads</span>
+                </div>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Inicio</a></li>
+                        <li><a href="#benefits" class="nav-link">Beneficios</a></li>
+                        <li><a href="#form" class="nav-link">Solicitar Info</a></li>
+                        <li><a href="#faq" class="nav-link">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="nav-buttons">
+                    <a href="tel:+15551234567" class="btn btn-secondary">
+                        <i class="fas fa-phone"></i> Llamar
+                    </a>
+                    <a href="#form" class="btn btn-primary">Solicitar Info</a>
+                </div>
+                
+                <div class="nav-toggle" id="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="inicio">
-        <div class="hero__container container">
-            <div class="hero__content">
-                <div class="hero__text">
-                    <div class="hero__badge">
-                        <i class="fas fa-shield-alt"></i>
-                        <span>Protección Garantizada</span>
-                    </div>
-                    
-                    <h1 class="hero__title" id="hero-title">
-                        Live Transfer para Seguros de Gastos Finales
-                    </h1>
-                    
-                    <p class="hero__description" id="hero-description">
-                        Protege a tu familia con un seguro de vida entera que cubre gastos funerarios y médicos finales. 
-                        <strong>Sin examen médico</strong>, cobertura hasta <strong>$30,000</strong>, y pagos mensuales que se adaptan a tu presupuesto.
-                    </p>
-                    
-                    <div class="hero__benefits">
-                        <div class="benefit-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Sin examen médico requerido</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Cobertura desde el primer día</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Primas nunca aumentan</span>
-                        </div>
-                    </div>
-                    
-                    <div class="hero__cta">
-                        <button class="btn btn--primary btn--large" id="cta-primary">
-                            <i class="fas fa-phone"></i>
-                            Conectar con Agente (30 segundos)
-                        </button>
-                        
-                        <button class="btn btn--secondary btn--large" id="cta-whatsapp">
-                            <i class="fab fa-whatsapp"></i>
-                            WhatsApp
-                        </button>
-                    </div>
-                    
-                    <div class="hero__trust">
-                        <div class="trust-item">
-                            <i class="fas fa-users"></i>
-                            <span>+50,000 familias protegidas</span>
-                        </div>
-                        <div class="trust-item">
-                            <i class="fas fa-clock"></i>
-                            <span>Respuesta en menos de 30 segundos</span>
-                        </div>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge" id="hero-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span id="badge-text">✓ Cobertura Inmediata</span>
+                </div>
+                
+                <h1 class="hero-title" id="hero-title">
+                    Live Transfer para Seguros de Gastos Finales
+                </h1>
+                
+                <p class="hero-subtitle" id="hero-subtitle">
+                    Protege a tu familia con cobertura desde $5,000 hasta $30,000 sin examen médico
+                </p>
+                
+                <div class="hero-stats" id="hero-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-users"></i>
+                        <span>+50K Familias Protegidas</span>
                     </div>
                 </div>
                 
-                <div class="hero__form">
-                    <div class="form-card">
-                        <h3 class="form-card__title">
-                            <i class="fas fa-gift"></i>
-                            Solicita Tu Cotización Gratuita
-                        </h3>
-                        
-                        <p class="form-card__subtitle">
-                            Completa el formulario y un agente especializado se pondrá en contacto contigo
-                        </p>
-                        
-                        <form class="lead-form" id="leadForm">
-                            <div class="form-group">
-                                <label for="nombre">Nombre Completo *</label>
-                                <input type="text" id="nombre" name="nombre" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="telefono">Número de Teléfono *</label>
-                                <input type="tel" id="telefono" name="telefono" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="estado">Estado de Residencia *</label>
-                                <select id="estado" name="estado" required>
-                                    <option value="">Selecciona tu estado</option>
-                                    <option value="TX">Texas</option>
-                                    <option value="FL">Florida</option>
-                                    <option value="CA">California</option>
-                                    <option value="NY">Nueva York</option>
-                                    <option value="IL">Illinois</option>
-                                    <option value="PA">Pensilvania</option>
-                                    <option value="OH">Ohio</option>
-                                    <option value="GA">Georgia</option>
-                                    <option value="NC">Carolina del Norte</option>
-                                    <option value="MI">Michigan</option>
-                                    <option value="AZ">Arizona</option>
-                                    <option value="other">Otro</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="edad">Rango de Edad *</label>
-                                <select id="edad" name="edad" required>
-                                    <option value="">Selecciona tu edad</option>
-                                    <option value="40-49">40-49 años</option>
-                                    <option value="50-59">50-59 años</option>
-                                    <option value="60-69">60-69 años</option>
-                                    <option value="70-79">70-79 años</option>
-                                    <option value="80-85">80-85 años</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="contacto">Medio de Contacto Preferido *</label>
-                                <div class="radio-group">
-                                    <label class="radio-option">
-                                        <input type="radio" name="contacto" value="llamada" checked>
-                                        <span class="radio-custom"></span>
-                                        Llamada Telefónica
-                                    </label>
-                                    <label class="radio-option">
-                                        <input type="radio" name="contacto" value="whatsapp">
-                                        <span class="radio-custom"></span>
-                                        WhatsApp
-                                    </label>
-                                </div>
-                            </div>
-                            
-                            <div class="form-group checkbox-group">
-                                <label class="checkbox-option">
-                                    <input type="checkbox" name="consentimiento" required>
-                                    <span class="checkbox-custom"></span>
-                                    <span class="checkbox-text">
-                                        Acepto recibir comunicaciones de seguros y autorizo el contacto telefónico. 
-                                        <a href="privacidad.html" target="_blank">Ver política de privacidad</a>
-                                    </span>
-                                </label>
-                            </div>
-                            
-                            <button type="submit" class="btn btn--primary btn--full">
-                                <i class="fas fa-paper-plane"></i>
-                                Solicitar Información Gratuita
-                            </button>
-                            
-                            <p class="form-disclaimer">
-                                <i class="fas fa-lock"></i>
-                                Tu información está protegida y segura
-                            </p>
-                        </form>
+                <div class="hero-trust-indicators" id="trust-indicators">
+                    <div class="trust-item">
+                        <i class="fas fa-check"></i>
+                        <span>Sin examen médico</span>
                     </div>
+                    <div class="trust-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Proceso en 24 horas</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-lock"></i>
+                        <span>Primas fijas de por vida</span>
+                    </div>
+                </div>
+                
+                <div class="hero-cta">
+                    <a href="#form" class="btn btn-primary btn-large" id="hero-cta-primary">
+                        <i class="fas fa-file-alt"></i> Solicitar Información
+                    </a>
+                    <a href="tel:+15551234567" class="btn btn-secondary btn-large" id="hero-cta-secondary">
+                        <i class="fas fa-phone"></i> Llamar Ahora
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Benefits Section -->
-    <section class="benefits section" id="beneficios">
+    <section class="benefits" id="benefits">
         <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">¿Por Qué Elegir Nuestro Seguro de Gastos Finales?</h2>
-                <p class="section__subtitle">
-                    Un seguro simple y económico que te da tranquilidad y protege a tu familia cuando más lo necesiten
-                </p>
+            <div class="section-header">
+                <h2>Beneficios de Nuestros Seguros de Gastos Finales</h2>
+                <p>Protección confiable diseñada para tu tranquilidad</p>
             </div>
             
-            <div class="benefits__grid">
-                <div class="benefit-card">
-                    <div class="benefit-card__icon">
-                        <i class="fas fa-dollar-sign"></i>
-                    </div>
-                    <h3 class="benefit-card__title">Pago en Efectivo</h3>
-                    <p class="benefit-card__description">
-                        Los beneficios se pagan en efectivo a tu beneficiario para cubrir gastos fúnebres, 
-                        médicos finales y otros gastos relacionados.
-                    </p>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-card__icon">
-                        <i class="fas fa-user-md"></i>
-                    </div>
-                    <h3 class="benefit-card__title">Sin Examen Médico</h3>
-                    <p class="benefit-card__description">
-                        Calificación basada en pocas preguntas de salud simples. 
-                        Casi todas las personas califican fácilmente.
-                    </p>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-card__icon">
-                        <i class="fas fa-calendar-check"></i>
-                    </div>
-                    <h3 class="benefit-card__title">Cobertura Inmediata</h3>
-                    <p class="benefit-card__description">
-                        Estás protegido desde el primer día que tu prima inicial es procesada 
-                        y tu póliza es emitida.
-                    </p>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-card__icon">
-                        <i class="fas fa-lock"></i>
-                    </div>
-                    <h3 class="benefit-card__title">Primas Fijas</h3>
-                    <p class="benefit-card__description">
-                        Las primas nunca aumentan y los beneficios nunca disminuyen. 
-                        Protección garantizada de por vida.
-                    </p>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-card__icon">
-                        <i class="fas fa-piggy-bank"></i>
-                    </div>
-                    <h3 class="benefit-card__title">Valor en Efectivo</h3>
-                    <p class="benefit-card__description">
-                        Después de un período específico, acumula valor en efectivo 
-                        que puedes usar o pedir prestado cuando necesites.
-                    </p>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-card__icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <h3 class="benefit-card__title">Reclamos Rápidos</h3>
-                    <p class="benefit-card__description">
-                        La mayoría de los reclamos son pagados dentro de 24 horas 
-                        al recibo de los documentos necesarios.
-                    </p>
-                </div>
+            <div class="benefits-grid" id="benefits-grid">
+                <!-- Los beneficios se cargarán dinámicamente desde JSON -->
             </div>
         </div>
     </section>
 
-    <!-- Coverage Details -->
-    <section class="coverage section">
+    <!-- Form Section -->
+    <section class="form-section" id="form">
         <div class="container">
-            <div class="coverage__content">
-                <div class="coverage__text">
-                    <h2 class="coverage__title">Cobertura Completa Para Tu Tranquilidad</h2>
-                    <p class="coverage__description">
-                        Nuestro seguro de gastos finales cubre todos los aspectos importantes para proteger a tu familia:
-                    </p>
-                    
-                    <div class="coverage__items">
-                        <div class="coverage-item">
-                            <div class="coverage-item__icon">
-                                <i class="fas fa-check"></i>
-                            </div>
-                            <div class="coverage-item__content">
-                                <h4>Servicios Funerarios</h4>
-                                <p>Ataúd, servicios profesionales, transportación y ceremonias</p>
-                            </div>
-                        </div>
-                        
-                        <div class="coverage-item">
-                            <div class="coverage-item__icon">
-                                <i class="fas fa-check"></i>
-                            </div>
-                            <div class="coverage-item__content">
-                                <h4>Gastos de Cementerio</h4>
-                                <p>Sepultura, bóveda, monumentos y marcadores</p>
-                            </div>
-                        </div>
-                        
-                        <div class="coverage-item">
-                            <div class="coverage-item__icon">
-                                <i class="fas fa-check"></i>
-                            </div>
-                            <div class="coverage-item__content">
-                                <h4>Cuentas Médicas Finales</h4>
-                                <p>Gastos médicos y hospitalarios no cubiertos</p>
-                            </div>
-                        </div>
-                        
-                        <div class="coverage-item">
-                            <div class="coverage-item__icon">
-                                <i class="fas fa-check"></i>
-                            </div>
-                            <div class="coverage-item__content">
-                                <h4>Gastos Adicionales</h4>
-                                <p>Flores, prendas de vestir, avisos en periódico y otros gastos</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="coverage__stats">
-                        <div class="stat-item">
-                            <div class="stat-item__number">0-85</div>
-                            <div class="stat-item__label">Años de edad elegibles</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-item__number">$30K</div>
-                            <div class="stat-item__label">Cobertura máxima</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-item__number">24h</div>
-                            <div class="stat-item__label">Pago de reclamos</div>
-                        </div>
-                    </div>
+            <div class="form-wrapper">
+                <div class="form-header">
+                    <h2 id="form-title">Solicita Tu Información Gratuita</h2>
+                    <p id="form-subtitle">Un agente especializado se pondrá en contacto contigo</p>
                 </div>
                 
-                <div class="coverage__image">
-                    <div class="image-placeholder">
-                        <i class="fas fa-family"></i>
-                        <p>Imagen de familia protegida</p>
+                <form class="lead-form" id="leadForm">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="nombre">Nombre Completo *</label>
+                            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo">
+                            <div class="error-message" id="nombre-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="telefono">Teléfono *</label>
+                            <input type="tel" id="telefono" name="telefono" required placeholder="(555) 123-4567">
+                            <div class="error-message" id="telefono-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="estado">Estado *</label>
+                            <select id="estado" name="estado" required>
+                                <option value="">Selecciona tu estado</option>
+                                <option value="Texas">Texas</option>
+                                <option value="Florida">Florida</option>
+                                <option value="California">California</option>
+                                <option value="Arizona">Arizona</option>
+                                <option value="Nevada">Nevada</option>
+                                <option value="Otro">Otro</option>
+                            </select>
+                            <div class="error-message" id="estado-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="edad">Rango de Edad *</label>
+                            <select id="edad" name="edad" required>
+                                <option value="">Selecciona tu edad</option>
+                                <option value="30-40 años">30-40 años</option>
+                                <option value="41-50 años">41-50 años</option>
+                                <option value="51-60 años">51-60 años</option>
+                                <option value="61-70 años">61-70 años</option>
+                                <option value="71+ años">71+ años</option>
+                            </select>
+                            <div class="error-message" id="edad-error"></div>
+                        </div>
                     </div>
-                </div>
+                    
+                    <!-- Consent Checkboxes -->
+                    <div class="consent-section">
+                        <h3>Preferencias de Comunicación</h3>
+                        <p class="consent-intro">Selecciona cómo prefieres que te contactemos (opcional):</p>
+                        
+                        <div class="consent-group">
+                            <div class="checkbox-wrapper">
+                                <input type="checkbox" id="sms_consent" name="sms_consent" value="1">
+                                <label for="sms_consent" class="checkbox-label">
+                                    <span class="checkmark"></span>
+                                    <div class="consent-text">
+                                        <strong>Mensajes de Texto (SMS)</strong><br>
+                                        Acepto recibir mensajes de texto (SMS) de <strong>SynapLeads</strong> para recordatorios, actualizaciones y ofertas ocasionales relacionadas con seguros de gastos finales. Frecuencia: máximo 4 mensajes por mes. Para cancelar, responde STOP. Para ayuda, responde HELP. Pueden aplicar cargos por mensajes y datos según tu plan. El consentimiento no es condición de compra. Consulta nuestros <a href="/sms-terms" target="_blank">Términos de SMS</a> y <a href="/privacidad" target="_blank">Política de Privacidad</a>.
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="consent-group">
+                            <div class="checkbox-wrapper">
+                                <input type="checkbox" id="whatsapp_consent" name="whatsapp_consent" value="1">
+                                <label for="whatsapp_consent" class="checkbox-label">
+                                    <span class="checkmark"></span>
+                                    <div class="consent-text">
+                                        <strong>WhatsApp</strong><br>
+                                        Acepto recibir comunicaciones por WhatsApp de SynapLeads para información sobre seguros de gastos finales. Puedo revocar este consentimiento en cualquier momento.
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Hidden Fields for Audit -->
+                    <input type="hidden" name="consent_version" value="v1.0-2025-01-14">
+                    <input type="hidden" name="page_url" id="page_url">
+                    <input type="hidden" name="utm_source" id="utm_source">
+                    <input type="hidden" name="utm_medium" id="utm_medium">
+                    <input type="hidden" name="utm_campaign" id="utm_campaign">
+                    <input type="hidden" name="timestamp" id="timestamp">
+                    <input type="hidden" name="user_ip" id="user_ip">
+                    <input type="hidden" name="user_agent" id="user_agent">
+                    <input type="hidden" name="sms_consent_text" id="sms_consent_text">
+                    <input type="hidden" name="whatsapp_consent_text" id="whatsapp_consent_text">
+                    
+                    <!-- Privacy Disclaimer -->
+                    <div class="privacy-disclaimer">
+                        <p>Al enviar este formulario, acepto que mis datos personales sean procesados de acuerdo con la <a href="/privacidad" target="_blank">Política de Privacidad</a> de SynapLeads.</p>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-large form-submit" id="submitBtn">
+                        <span class="btn-text">Solicitar Información Ahora</span>
+                        <span class="btn-loading hidden">
+                            <i class="fas fa-spinner fa-spin"></i> Enviando...
+                        </span>
+                    </button>
+                    
+                    <div class="form-guarantees">
+                        <div class="guarantee-item">
+                            <i class="fas fa-check"></i>
+                            <span>Sin costo por la información</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Sin compromiso de compra</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="fas fa-lock"></i>
+                            <span>Información confidencial protegida</span>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
 
     <!-- FAQ Section -->
-    <section class="faq section" id="faq">
+    <section class="faq" id="faq">
         <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Preguntas Frecuentes</h2>
-                <p class="section__subtitle">
-                    Resuelve tus dudas sobre nuestro seguro de gastos finales
-                </p>
+            <div class="section-header">
+                <h2>Preguntas Frecuentes</h2>
+                <p>Resuelve tus dudas sobre seguros de gastos finales</p>
             </div>
             
-            <div class="faq__container">
-                <div class="faq-item">
-                    <div class="faq-item__question">
-                        <h3>¿En cuánto tiempo me contactan?</h3>
-                        <i class="fas fa-plus"></i>
-                    </div>
-                    <div class="faq-item__answer">
-                        <p>En promedio entre 5 y 30 segundos después de completar el formulario. 
-                        Nuestros agentes especializados están disponibles para atenderte inmediatamente.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-item__question">
-                        <h3>¿Necesito hacer un examen médico?</h3>
-                        <i class="fas fa-plus"></i>
-                    </div>
-                    <div class="faq-item__answer">
-                        <p>No, no se requiere examen médico. Solo necesitas responder pocas preguntas 
-                        simples de salud. Casi todas las personas califican fácilmente.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-item__question">
-                        <h3>¿Puedo recibir información por WhatsApp?</h3>
-                        <i class="fas fa-plus"></i>
-                    </div>
-                    <div class="faq-item__answer">
-                        <p>Sí, disponible como opción. Puedes elegir recibir la información 
-                        por llamada telefónica o por WhatsApp, según tu preferencia.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-item__question">
-                        <h3>¿Cuáles son los montos de cobertura disponibles?</h3>
-                        <i class="fas fa-plus"></i>
-                    </div>
-                    <div class="faq-item__answer">
-                        <p>Ofrecemos cobertura de seguro de vida entera hasta $30,000. 
-                        El monto exacto dependerá de tu edad, salud y necesidades específicas.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-item__question">
-                        <h3>¿Las primas pueden aumentar con el tiempo?</h3>
-                        <i class="fas fa-plus"></i>
-                    </div>
-                    <div class="faq-item__answer">
-                        <p>No, las primas son fijas y nunca aumentan. Los beneficios tampoco disminuyen. 
-                        Es protección garantizada de por vida.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-item__question">
-                        <h3>¿Puedo perder mi póliza por cambios de salud o edad?</h3>
-                        <i class="fas fa-plus"></i>
-                    </div>
-                    <div class="faq-item__answer">
-                        <p>No, siempre y cuando hagas tus pagos a tiempo, no puedes perder esta protección 
-                        por edad o cambios en la salud que ocurran después de que tu póliza entre en vigor.</p>
-                    </div>
-                </div>
+            <div class="faq-container" id="faq-container">
+                <!-- Las preguntas se cargarán dinámicamente desde JSON -->
             </div>
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="testimonials section">
+    <!-- Testimonials Section -->
+    <section class="testimonials">
         <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Lo Que Dicen Nuestros Clientes</h2>
-                <p class="section__subtitle">
-                    Testimonios reales de familias que han encontrado tranquilidad con nuestro seguro
-                </p>
+            <div class="section-header">
+                <h2>Lo que Dicen Nuestros Clientes</h2>
+                <p>Experiencias reales de familias protegidas</p>
             </div>
             
-            <div class="testimonials__grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-card__content">
-                        <div class="testimonial-card__stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="testimonial-card__text">
-                            "Gracias a Synapleads, encontré el seguro perfecto para proteger a mi familia. 
-                            El proceso fue rápido y sin complicaciones."
-                        </p>
-                        <div class="testimonial-card__author">
-                            <div class="author-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <div class="author-info">
-                                <h4>María González</h4>
-                                <p>Houston, TX</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-card__content">
-                        <div class="testimonial-card__stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="testimonial-card__text">
-                            "Los agentes me explicaron todo claramente. Ahora tengo la tranquilidad 
-                            de saber que mi familia estará protegida."
-                        </p>
-                        <div class="testimonial-card__author">
-                            <div class="author-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <div class="author-info">
-                                <h4>Carlos Rodríguez</h4>
-                                <p>Miami, FL</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-card__content">
-                        <div class="testimonial-card__stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="testimonial-card__text">
-                            "Sin examen médico y con pagos que puedo manejar. 
-                            Exactamente lo que necesitaba para mi presupuesto."
-                        </p>
-                        <div class="testimonial-card__author">
-                            <div class="author-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <div class="author-info">
-                                <h4>Ana Martínez</h4>
-                                <p>Los Angeles, CA</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="final-cta section">
-        <div class="container">
-            <div class="final-cta__content">
-                <h2 class="final-cta__title">
-                    ¿Listo Para Proteger a Tu Familia?
-                </h2>
-                <p class="final-cta__description">
-                    No esperes más. Obtén tu cotización gratuita y asegura la tranquilidad 
-                    de tu familia con nuestro seguro de gastos finales.
-                </p>
-                
-                <div class="final-cta__buttons">
-                    <button class="btn btn--primary btn--large" id="final-cta-phone">
-                        <i class="fas fa-phone"></i>
-                        Llamar Ahora - Conexión Inmediata
-                    </button>
-                    
-                    <button class="btn btn--secondary btn--large" id="final-cta-form">
-                        <i class="fas fa-form"></i>
-                        Completar Formulario
-                    </button>
-                </div>
-                
-                <div class="final-cta__guarantee">
-                    <div class="guarantee-item">
-                        <i class="fas fa-shield-alt"></i>
-                        <span>Información 100% confidencial</span>
-                    </div>
-                    <div class="guarantee-item">
-                        <i class="fas fa-clock"></i>
-                        <span>Respuesta en menos de 30 segundos</span>
-                    </div>
-                    <div class="guarantee-item">
-                        <i class="fas fa-gift"></i>
-                        <span>Cotización completamente gratis</span>
-                    </div>
-                </div>
+            <div class="testimonials-grid" id="testimonials-grid">
+                <!-- Los testimonios se cargarán dinámicamente desde JSON -->
             </div>
         </div>
     </section>
@@ -579,49 +273,93 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer__content">
-                <div class="footer__main">
-                    <div class="footer__logo">
-                        <img src="images/synapleads-logo.png" alt="Synapleads Logo" class="footer__logo-img">
-                        <p class="footer__description">
-                            Especialistas en conexión de leads con agentes reales. 
-                            Tu tranquilidad es nuestra prioridad.
-                        </p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo-synapleads.png" alt="SynapLeads" onerror="this.style.display='none'">
+                        <span class="logo-text">SynapLeads</span>
                     </div>
+                    <p>Conectando familias con la protección que necesitan desde 1999.</p>
                     
-                    <div class="footer__contact">
-                        <h4>Contacto</h4>
+                    <div class="footer-contact">
                         <div class="contact-item">
                             <i class="fas fa-phone"></i>
-                            <span id="footer-phone">+1 (800) 123-4567</span>
+                            <a href="tel:+15551234567">+1 (555) 123-4567</a>
                         </div>
                         <div class="contact-item">
                             <i class="fab fa-whatsapp"></i>
-                            <span id="footer-whatsapp">WhatsApp</span>
+                            <a href="https://wa.me/15551234567">WhatsApp</a>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
-                            <span id="footer-email">admin@synapleads.com</span>
+                            <a href="mailto:info@synapleads.com">info@synapleads.com</a>
                         </div>
                     </div>
                 </div>
                 
-                <div class="footer__legal">
-                    <div class="footer__links">
-                        <a href="privacidad.html">Política de Privacidad</a>
-                        <a href="terminos.html">Términos y Condiciones</a>
-                    </div>
-                    <div class="footer__copy">
-                        <p>&copy; 2024 Synapleads. Todos los derechos reservados.</p>
-                    </div>
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#benefits">Seguros de Gastos Finales</a></li>
+                        <li><a href="#form">Live Transfer</a></li>
+                        <li><a href="#faq">Información y FAQ</a></li>
+                    </ul>
                 </div>
+                
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/privacidad">Política de Privacidad</a></li>
+                        <li><a href="/terminos">Términos de Uso</a></li>
+                        <li><a href="/sms-terms">Términos de SMS</a></li>
+                        <li><a href="#disclaimer">Disclaimer</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="tel:+15551234567">Llamar Ahora</a></li>
+                        <li><a href="https://wa.me/15551234567">WhatsApp</a></li>
+                        <li><a href="mailto:info@synapleads.com">Email</a></li>
+                        <li><a href="#form">Formulario de Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 SynapLeads LLC. Todos los derechos reservados. | San Antonio, TX, USA</p>
+                <p class="disclaimer">SynapLeads es un servicio de conexión con agentes de seguros. No somos una compañía de seguros.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- Scripts -->
     <script src="js/content-loader.js"></script>
     <script src="js/landing.js"></script>
-    <script src="js/main.js"></script>
+    
+    <!-- Analytics -->
+    <script>
+        // Google Analytics 4
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX'); // Reemplazar con GA4 ID real
+        
+        // Meta Pixel
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'XXXXXXXXXXXXXXX'); // Reemplazar con Meta Pixel ID real
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=XXXXXXXXXXXXXXX&ev=PageView&noscript=1"
+    /></noscript>
 </body>
 </html>
