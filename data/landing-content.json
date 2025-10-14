@@ -16,27 +16,27 @@
   "benefits": [
     {
       "title": "Sin Examen Médico Requerido",
-      "description": "Obtén cobertura completa sin exámenes médicos complicados. Solo responde algunas preguntas básicas de salud y queda protegido.",
+      "description": "Obtén cobertura sin exámenes médicos complicados. Solo responde algunas preguntas básicas de salud para determinar tu elegibilidad.",
       "icon": "fas fa-stethoscope",
-      "highlight": "Aprobación garantizada para edades 0-85 años"
+      "highlight": "Disponible para edades 0-85 años"
     },
     {
       "title": "Primas Fijas de Por Vida",
-      "description": "Tus pagos nunca aumentarán y los beneficios nunca disminuirán. Protección garantizada que se adapta a tu presupuesto.",
+      "description": "En planes elegibles, tus pagos no aumentarán y los beneficios no disminuirán una vez que tu póliza esté en vigor.",
       "icon": "fas fa-lock",
-      "highlight": "Las primas nunca aumentan, garantizado"
+      "highlight": "Primas fijas en planes elegibles"
     },
     {
       "title": "Cobertura Desde el Primer Día",
-      "description": "La mayoría de planes ofrecen protección completa desde que se emite tu póliza. Sin períodos de espera complicados.",
+      "description": "Muchos planes ofrecen protección desde que se emite tu póliza, sujeto a los términos de la póliza específica.",
       "icon": "fas fa-clock",
-      "highlight": "Protección inmediata hasta $30,000"
+      "highlight": "Cobertura disponible hasta $30,000"
     },
     {
       "title": "Servicio de Reclamos Rápido",
-      "description": "Procesamos la mayoría de reclamos en 24 horas. Tu familia recibirá el dinero cuando más lo necesite.",
+      "description": "Trabajamos para procesar reclamos elegibles lo más rápido posible, típicamente dentro de 24 horas al recibir la documentación completa.",
       "icon": "fas fa-tachometer-alt",
-      "highlight": "Reclamos pagados en 24 horas"
+      "highlight": "Procesamiento rápido de reclamos elegibles"
     },
     {
       "title": "Acumula Valor en Efectivo",
@@ -65,7 +65,7 @@
   },
   "form": {
     "title": "Solicita Tu Información Gratuita",
-    "subtitle": "Un agente especializado se pondrá en contacto contigo en segundos",
+    "subtitle": "Un agente especializado se pondrá en contacto contigo",
     "fields": [
       {
         "name": "nombre",
@@ -94,18 +94,63 @@
         "type": "select",
         "required": true,
         "options": ["30-40 años", "41-50 años", "51-60 años", "61-70 años", "71+ años"]
-      },
-      {
-        "name": "contacto_preferido",
-        "label": "Medio de Contacto Preferido",
-        "type": "radio",
-        "required": true,
-        "options": ["Llamada telefónica", "WhatsApp"]
       }
     ],
-    "consent_text": "Al enviar este formulario, autorizo a ser contactado por teléfono, mensaje de texto o email sobre productos de seguros.",
+    "consent_checkboxes": [
+      {
+        "name": "sms_consent",
+        "type": "checkbox",
+        "required": false,
+        "pre_checked": false,
+        "label": "Consentimiento SMS",
+        "text": "Acepto recibir mensajes de texto (SMS) de SynapLeads para recordatorios, actualizaciones y ofertas ocasionales relacionadas con seguros de gastos finales. Frecuencia: máximo 4 mensajes por mes. Para cancelar, responde STOP. Para ayuda, responde HELP. Pueden aplicar cargos por mensajes y datos según tu plan. El consentimiento no es condición de compra. Consulta nuestros <a href='/sms-terms' target='_blank'>Términos de SMS</a> y <a href='/privacidad' target='_blank'>Política de Privacidad</a>."
+      },
+      {
+        "name": "whatsapp_consent", 
+        "type": "checkbox",
+        "required": false,
+        "pre_checked": false,
+        "label": "Consentimiento WhatsApp",
+        "text": "Acepto recibir comunicaciones por WhatsApp de SynapLeads para información sobre seguros de gastos finales. Puedo revocar este consentimiento en cualquier momento."
+      }
+    ],
+    "hidden_fields": [
+      {
+        "name": "consent_version",
+        "value": "v1.0-2025-01-14"
+      },
+      {
+        "name": "page_url",
+        "value": "dynamic"
+      },
+      {
+        "name": "utm_source",
+        "value": "dynamic"
+      },
+      {
+        "name": "utm_medium", 
+        "value": "dynamic"
+      },
+      {
+        "name": "utm_campaign",
+        "value": "dynamic"
+      },
+      {
+        "name": "timestamp",
+        "value": "dynamic"
+      },
+      {
+        "name": "user_ip",
+        "value": "dynamic"
+      },
+      {
+        "name": "user_agent",
+        "value": "dynamic"
+      }
+    ],
     "submit_text": "Solicitar Información Ahora",
-    "redirect_url": "gracias.html"
+    "redirect_url": "gracias.html",
+    "privacy_disclaimer": "Al enviar este formulario, acepto que mis datos personales sean procesados de acuerdo con la Política de Privacidad de SynapLeads."
   },
   "faq": [
     {
@@ -126,7 +171,7 @@
     },
     {
       "question": "¿Qué pasa si tengo condiciones de salud preexistentes?",
-      "answer": "Muchas personas con condiciones preexistentes califican para nuestros planes. Si no calificas para cobertura completa inmediata, podrías calificar para un plan con beneficios graduados."
+      "answer": "Muchas personas con condiciones preexistentes pueden calificar para nuestros planes. Si no calificas para cobertura completa inmediata, podrías calificar para un plan con beneficios graduados, sujeto a los términos específicos de la póliza."
     },
     {
       "question": "¿El beneficio es libre de impuestos?",
@@ -172,9 +217,20 @@
     "years_experience": "25+ Años Experiencia"
   },
   "urgency": {
-    "title": "Oferta Especial por Tiempo Limitado",
-    "description": "Primer mes gratis en pólizas aprobadas este mes",
-    "expires": "Válido hasta fin de mes",
-    "disclaimer": "Aplican términos y condiciones"
+    "title": "Información Gratuita Disponible",
+    "description": "Consulta sin costo sobre opciones de cobertura disponibles",
+    "expires": "Disponible para residentes elegibles",
+    "disclaimer": "La elegibilidad está sujeta a términos y condiciones de cada aseguradora"
+  },
+  "compliance": {
+    "a2p_10dlc": {
+      "registered": true,
+      "brand_name": "SynapLeads",
+      "campaign_type": "customer_care",
+      "use_case": "insurance_lead_generation",
+      "opt_in_required": true,
+      "opt_out_keywords": ["STOP", "CANCEL", "END", "QUIT", "UNSUBSCRIBE", "SALIR", "CANCELAR"],
+      "help_keywords": ["HELP", "INFO", "SUPPORT", "AYUDA", "INFORMACIÓN"]
+    }
   }
 }

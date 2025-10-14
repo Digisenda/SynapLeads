@@ -41,9 +41,18 @@
     "chat_widget": false
   },
   "legal": {
-    "company_name": "Synapleads LLC",
+    "company_name": "SynapLeads LLC",
     "registration_state": "Texas",
     "license_number": "",
-    "last_updated": "2025-01-01"
+    "last_updated": "2025-01-14"
+  },
+  "sms_compliance": {
+    "a2p_10dlc_registered": true,
+    "brand_name": "SynapLeads",
+    "max_frequency_per_month": 4,
+    "opt_in_required": true,
+    "consent_version": "v1.0-2025-01-14",
+    "terms_url": "/sms-terms",
+    "privacy_url": "/privacidad"
   }
 }
