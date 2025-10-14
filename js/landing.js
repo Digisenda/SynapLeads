@@ -1,288 +1,329 @@
-// Landing Page JavaScript
-document.addEventListener('DOMContentLoaded', function() {
-    
-    // ========================================
-    // CONFIGURATION AND INITIALIZATION
-    // ========================================
-    
-    const config = {
-        // UTM Parameters tracking
-        utmParams: getUtmParameters(),
+/**
+ * Landing Page JavaScript - Seguros de Gastos Finales
+ * Incluye funcionalidad A2P 10DLC compliant
+ */
+
+class LandingPage {
+    constructor() {
+        this.contentData = null;
+        this.formSubmitted = false;
+        this.consentTextCapture = {};
         
-        // Form configuration
-        form: {
-            redirectUrl: 'gracias.html',
-            webhook: '', // To be configured from admin panel
-            emailEndpoint: '' // To be configured from admin panel
-        },
-        
-        // Contact information (loaded dynamically)
-        contact: {
-            phone: '+1 (800) 123-4567',
-            whatsapp: '+1 (800) 123-4567',
-            email: 'admin@synapleads.com'
-        }
-    };
-    
-    // Initialize landing page functionality
-    initializeLanding();
-    
-    // ========================================
-    // MAIN INITIALIZATION FUNCTION
-    // ========================================
-    
-    function initializeLanding() {
-        loadContent();
-        setupFormHandling();
-        setupFAQAccordion();
-        setupCTAButtons();
-        setupSmoothScrolling();
-        setupPhoneAndWhatsAppLinks();
-        trackPageView();
+        this.init();
     }
     
-    // ========================================
-    // CONTENT LOADING
-    // ========================================
-    
-    async function loadContent() {
+    async init() {
         try {
-            // Load configuration
-            const configResponse = await fetch('data/config.json');
-            if (configResponse.ok) {
-                const configData = await configResponse.json();
-                Object.assign(config.contact, configData.contact);
-                
-                // Update contact information in DOM
-                updateContactInfo(configData.contact);
-                
-                // Initialize tracking with loaded config
-                if (configData.analytics) {
-                    initializeAnalytics(configData.analytics);
-                }
-            }
+            await this.loadContent();
+            this.bindEvents();
+            this.initializeForm();
+            this.captureAnalyticsData();
             
-            // Load landing-specific content
-            const contentResponse = await fetch('data/landing-content.json');
-            if (contentResponse.ok) {
-                const contentData = await contentResponse.json();
-                updateLandingContent(contentData);
-            }
+            console.log('Landing page initialized successfully');
+        } catch (error) {
+            console.error('Error initializing landing page:', error);
+        }
+    }
+    
+    async loadContent() {
+        try {
+            const response = await fetch('data/landing-content.json');
+            if (!response.ok) throw new Error('Failed to load content');
             
+            this.contentData = await response.json();
+            this.renderContent();
         } catch (error) {
             console.error('Error loading content:', error);
+            this.loadFallbackContent();
         }
     }
     
-    function updateContactInfo(contact) {
-        // Update phone numbers
-        const phoneElements = document.querySelectorAll('#footer-phone, #cta-primary');
-        phoneElements.forEach(el => {
-            if (el.tagName === 'SPAN') {
-                el.textContent = contact.phone;
-            } else if (el.tagName === 'BUTTON') {
-                el.innerHTML = `<i class="fas fa-phone"></i> ${contact.phone} (30 segundos)`;
-            }
-        });
+    renderContent() {
+        if (!this.contentData) return;
         
-        // Update WhatsApp
-        const whatsappElements = document.querySelectorAll('#footer-whatsapp, #cta-whatsapp');
-        whatsappElements.forEach(el => {
-            if (el.tagName === 'SPAN') {
-                el.textContent = 'WhatsApp';
-            }
-        });
+        // Hero section
+        this.updateElement('hero-title', this.contentData.hero?.title);
+        this.updateElement('hero-subtitle', this.contentData.hero?.subtitle);
+        this.updateElement('badge-text', this.contentData.hero?.badge);
         
-        // Update email
-        const emailElement = document.querySelector('#footer-email');
-        if (emailElement) {
-            emailElement.textContent = contact.email;
+        // Benefits
+        this.renderBenefits();
+        
+        // FAQ
+        this.renderFAQ();
+        
+        // Testimonials
+        this.renderTestimonials();
+        
+        // Form
+        this.updateElement('form-title', this.contentData.form?.title);
+        this.updateElement('form-subtitle', this.contentData.form?.subtitle);
+    }
+    
+    updateElement(id, content) {
+        const element = document.getElementById(id);
+        if (element && content) {
+            element.textContent = content;
         }
     }
     
-    function updateLandingContent(content) {
-        // Update hero section
-        if (content.hero) {
-            const titleElement = document.querySelector('#hero-title');
-            const descElement = document.querySelector('#hero-description');
-            
-            if (titleElement && content.hero.title) {
-                titleElement.textContent = content.hero.title;
-            }
-            if (descElement && content.hero.description) {
-                descElement.textContent = content.hero.description;
-            }
-        }
+    renderBenefits() {
+        const benefitsGrid = document.getElementById('benefits-grid');
+        if (!benefitsGrid || !this.contentData.benefits) return;
+        
+        benefitsGrid.innerHTML = this.contentData.benefits.map(benefit => `
+            <div class="benefit-card fade-in">
+                <div class="benefit-icon">
+                    <i class="${benefit.icon || 'fas fa-check'}"></i>
+                </div>
+                <h3 class="benefit-title">${benefit.title}</h3>
+                <p class="benefit-description">${benefit.description}</p>
+                <span class="benefit-highlight">${benefit.highlight}</span>
+            </div>
+        `).join('');
     }
     
-    // ========================================
-    // FORM HANDLING
-    // ========================================
+    renderFAQ() {
+        const faqContainer = document.getElementById('faq-container');
+        if (!faqContainer || !this.contentData.faq) return;
+        
+        faqContainer.innerHTML = this.contentData.faq.map((item, index) => `
+            <div class="faq-item" data-faq="${index}">
+                <div class="faq-question" onclick="window.landingPage.toggleFAQ(${index})">
+                    <span>${item.question}</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>${item.answer}</p>
+                </div>
+            </div>
+        `).join('');
+    }
     
-    function setupFormHandling() {
-        const leadForm = document.querySelector('#leadForm');
-        if (leadForm) {
-            leadForm.addEventListener('submit', handleFormSubmit);
+    renderTestimonials() {
+        const testimonialsGrid = document.getElementById('testimonials-grid');
+        if (!testimonialsGrid || !this.contentData.testimonials) return;
+        
+        testimonialsGrid.innerHTML = this.contentData.testimonials.map(testimonial => `
+            <div class="testimonial-card fade-in">
+                <div class="testimonial-quote">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="testimonial-text">${testimonial.text}</p>
+                <div class="testimonial-author">
+                    <div class="author-info">
+                        <h4>${testimonial.name}</h4>
+                        <p>${testimonial.age} • ${testimonial.location} • Cobertura: ${testimonial.coverage}</p>
+                    </div>
+                    <div class="testimonial-rating">
+                        ${Array(testimonial.rating || 5).fill().map(() => '<i class="fas fa-star"></i>').join('')}
+                    </div>
+                </div>
+            </div>
+        `).join('');
+    }
+    
+    bindEvents() {
+        // Form submission
+        const form = document.getElementById('leadForm');
+        if (form) {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                this.handleFormSubmission();
+            });
         }
         
         // Real-time validation
-        const inputs = leadForm.querySelectorAll('input, select');
+        const inputs = document.querySelectorAll('input[required], select[required]');
         inputs.forEach(input => {
-            input.addEventListener('blur', validateField);
-            input.addEventListener('input', clearFieldError);
+            input.addEventListener('blur', () => this.validateField(input));
+            input.addEventListener('input', () => this.clearFieldError(input));
         });
         
         // Phone number formatting
-        const phoneInput = document.querySelector('#telefono');
+        const phoneInput = document.getElementById('telefono');
         if (phoneInput) {
-            phoneInput.addEventListener('input', formatPhoneNumber);
-        }
-    }
-    
-    async function handleFormSubmit(e) {
-        e.preventDefault();
-        
-        const form = e.target;
-        const submitButton = form.querySelector('button[type=\"submit\"]');
-        const originalText = submitButton.innerHTML;
-        
-        // Validate form
-        if (!validateForm(form)) {
-            return;
+            phoneInput.addEventListener('input', this.formatPhoneNumber);
         }
         
-        // Show loading state
-        submitButton.disabled = true;
-        submitButton.innerHTML = '<i class=\"fas fa-spinner fa-spin\"></i> Enviando...';
-        
-        try {
-            // Collect form data
-            const formData = collectFormData(form);
-            
-            // Add UTM parameters
-            Object.assign(formData, config.utmParams);
-            
-            // Add timestamp
-            formData.timestamp = new Date().toISOString();
-            formData.page = 'landing-seguros';
-            
-            // Track form submission
-            trackEvent('form_submit', {
-                form_name: 'lead_form',
-                page: 'landing-seguros'
-            });
-            
-            // Submit form data
-            const success = await submitFormData(formData);
-            
-            if (success) {
-                // Track conversion
-                trackEvent('conversion', {
-                    event_category: 'lead_generation',
-                    event_label: 'seguros_gastos_finales'
-                });
-                
-                // Store lead data in session for thank you page
-                sessionStorage.setItem('leadData', JSON.stringify(formData));
-                
-                // Redirect to thank you page
-                window.location.href = config.form.redirectUrl;
-            } else {
-                throw new Error('Form submission failed');
-            }
-            
-        } catch (error) {
-            console.error('Form submission error:', error);
-            showFormError('Ha ocurrido un error. Por favor, intenta nuevamente o llama directamente.');
-            
-            // Track error
-            trackEvent('form_error', {
-                error_message: error.message,
-                page: 'landing-seguros'
-            });
-            
-        } finally {
-            // Restore button
-            submitButton.disabled = false;
-            submitButton.innerHTML = originalText;
-        }
-    }
-    
-    function collectFormData(form) {
-        const formData = {};
-        const inputs = form.querySelectorAll('input, select');
-        
-        inputs.forEach(input => {
-            if (input.type === 'radio') {
-                if (input.checked) {
-                    formData[input.name] = input.value;
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = document.querySelector(anchor.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
                 }
-            } else if (input.type === 'checkbox') {
-                if (input.checked) {
-                    formData[input.name] = true;
-                }
-            } else {
-                formData[input.name] = input.value;
-            }
+            });
         });
         
-        return formData;
+        // Consent checkbox tracking
+        const smsCheckbox = document.getElementById('sms_consent');
+        const whatsappCheckbox = document.getElementById('whatsapp_consent');
+        
+        if (smsCheckbox) {
+            smsCheckbox.addEventListener('change', () => this.trackConsentChange('sms', smsCheckbox.checked));
+        }
+        
+        if (whatsappCheckbox) {
+            whatsappCheckbox.addEventListener('change', () => this.trackConsentChange('whatsapp', whatsappCheckbox.checked));
+        }
     }
     
-    async function submitFormData(formData) {
-        // Multiple submission methods for redundancy
-        const promises = [];
+    initializeForm() {
+        // Capture consent text for audit purposes
+        this.captureConsentTexts();
         
-        // Method 1: Webhook (if configured)
-        if (config.form.webhook) {
-            promises.push(
-                fetch(config.form.webhook, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(formData)
-                })
-            );
+        // Populate hidden fields
+        this.populateHiddenFields();
+        
+        // Set form validation messages
+        this.setupFormValidation();
+    }
+    
+    captureConsentTexts() {
+        const smsLabel = document.querySelector('label[for="sms_consent"] .consent-text');
+        const whatsappLabel = document.querySelector('label[for="whatsapp_consent"] .consent-text');
+        
+        if (smsLabel) {
+            this.consentTextCapture.sms = smsLabel.textContent.trim();
+            document.getElementById('sms_consent_text').value = this.consentTextCapture.sms;
         }
         
-        // Method 2: Email endpoint (if configured)
-        if (config.form.emailEndpoint) {
-            promises.push(
-                fetch(config.form.emailEndpoint, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(formData)
-                })
-            );
+        if (whatsappLabel) {
+            this.consentTextCapture.whatsapp = whatsappLabel.textContent.trim();
+            document.getElementById('whatsapp_consent_text').value = this.consentTextCapture.whatsapp;
         }
+    }
+    
+    populateHiddenFields() {
+        // Current page URL
+        document.getElementById('page_url').value = window.location.href;
         
-        // Method 3: Local storage backup
-        const existingLeads = JSON.parse(localStorage.getItem('leads') || '[]');
-        existingLeads.push(formData);
-        localStorage.setItem('leads', JSON.stringify(existingLeads));
+        // UTM parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        document.getElementById('utm_source').value = urlParams.get('utm_source') || '';
+        document.getElementById('utm_medium').value = urlParams.get('utm_medium') || '';
+        document.getElementById('utm_campaign').value = urlParams.get('utm_campaign') || '';
         
+        // Timestamp
+        document.getElementById('timestamp').value = new Date().toISOString();
+        
+        // User agent
+        document.getElementById('user_agent').value = navigator.userAgent;
+        
+        // Get user IP (would normally be done server-side)
+        this.getUserIP();
+    }
+    
+    async getUserIP() {
         try {
-            if (promises.length > 0) {
-                const results = await Promise.allSettled(promises);
-                // Return true if at least one submission succeeded
-                return results.some(result => result.status === 'fulfilled');
-            }
-            return true; // Local storage always works
+            const response = await fetch('https://api.ipify.org?format=json');
+            const data = await response.json();
+            document.getElementById('user_ip').value = data.ip;
         } catch (error) {
-            console.error('Submission error:', error);
-            return true; // Still count as success due to local storage
+            console.warn('Could not get user IP:', error);
+            document.getElementById('user_ip').value = 'unavailable';
         }
     }
     
-    function validateForm(form) {
-        let isValid = true;
-        const inputs = form.querySelectorAll('input[required], select[required]');
+    setupFormValidation() {
+        const form = document.getElementById('leadForm');
+        if (form) {
+            form.setAttribute('novalidate', 'true');
+        }
+    }
+    
+    validateField(field) {
+        const fieldName = field.name;
+        const value = field.value.trim();
+        const errorElement = document.getElementById(`${fieldName}-error`);
         
-        inputs.forEach(input => {
-            if (!validateField({ target: input })) {
+        let isValid = true;
+        let errorMessage = '';
+        
+        // Required field validation
+        if (field.required && !value) {
+            isValid = false;
+            errorMessage = 'Este campo es obligatorio';
+        }
+        
+        // Specific field validation
+        switch (fieldName) {
+            case 'nombre':
+                if (value && value.length < 2) {
+                    isValid = false;
+                    errorMessage = 'El nombre debe tener al menos 2 caracteres';
+                } else if (value && !/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/.test(value)) {
+                    isValid = false;
+                    errorMessage = 'El nombre solo puede contener letras y espacios';
+                }
+                break;
+                
+            case 'telefono':
+                const phoneRegex = /^\(\d{3}\)\s\d{3}-\d{4}$|^\d{10}$/;
+                if (value && !phoneRegex.test(value.replace(/\D/g, ''))) {
+                    isValid = false;
+                    errorMessage = 'Ingresa un número de teléfono válido';
+                }
+                break;
+                
+            case 'estado':
+                if (value === '') {
+                    isValid = false;
+                    errorMessage = 'Selecciona tu estado';
+                }
+                break;
+                
+            case 'edad':
+                if (value === '') {
+                    isValid = false;
+                    errorMessage = 'Selecciona tu rango de edad';
+                }
+                break;
+        }
+        
+        // Show/hide error message
+        if (errorElement) {
+            if (isValid) {
+                errorElement.classList.remove('show');
+                field.classList.remove('error');
+            } else {
+                errorElement.textContent = errorMessage;
+                errorElement.classList.add('show');
+                field.classList.add('error');
+            }
+        }
+        
+        return isValid;
+    }
+    
+    clearFieldError(field) {
+        const errorElement = document.getElementById(`${field.name}-error`);
+        if (errorElement) {
+            errorElement.classList.remove('show');
+            field.classList.remove('error');
+        }
+    }
+    
+    formatPhoneNumber(e) {
+        let value = e.target.value.replace(/\D/g, '');
+        
+        if (value.length >= 6) {
+            value = `(${value.slice(0, 3)}) ${value.slice(3, 6)}-${value.slice(6, 10)}`;
+        } else if (value.length >= 3) {
+            value = `(${value.slice(0, 3)}) ${value.slice(3)}`;
+        }
+        
+        e.target.value = value;
+    }
+    
+    validateForm() {
+        const requiredFields = document.querySelectorAll('input[required], select[required]');
+        let isValid = true;
+        
+        requiredFields.forEach(field => {
+            if (!this.validateField(field)) {
                 isValid = false;
             }
         });
@@ -290,382 +331,311 @@ document.addEventListener('DOMContentLoaded', function() {
         return isValid;
     }
     
-    function validateField(e) {
-        const input = e.target;
-        const value = input.value.trim();
-        let isValid = true;
-        let errorMessage = '';
+    async handleFormSubmission() {
+        if (this.formSubmitted) return;
         
-        // Remove previous error
-        clearFieldError({ target: input });
-        
-        // Required field validation
-        if (input.hasAttribute('required') && !value) {
-            isValid = false;
-            errorMessage = 'Este campo es obligatorio';
+        // Validate form
+        if (!this.validateForm()) {
+            this.showFormMessage('Por favor, corrige los errores antes de continuar.', 'error');
+            return;
         }
         
-        // Specific field validations
-        if (value) {
-            switch (input.type) {
-                case 'email':
-                    if (!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(value)) {
-                        isValid = false;
-                        errorMessage = 'Ingresa un email válido';
-                    }
-                    break;
-                case 'tel':
-                    if (!/^[\\d\\s\\-\\(\\)\\+]{10,}$/.test(value)) {
-                        isValid = false;
-                        errorMessage = 'Ingresa un teléfono válido (mínimo 10 dígitos)';
-                    }
-                    break;
+        this.formSubmitted = true;
+        
+        // Show loading state
+        this.setSubmitButtonLoading(true);
+        
+        try {
+            // Collect form data
+            const formData = this.collectFormData();
+            
+            // Send to backend
+            const success = await this.submitToBackend(formData);
+            
+            if (success) {
+                // Track conversion
+                this.trackConversion(formData);
+                
+                // Redirect to thank you page
+                this.redirectToThankYou(formData);
+            } else {
+                throw new Error('Form submission failed');
+            }
+            
+        } catch (error) {
+            console.error('Form submission error:', error);
+            this.showFormMessage('Error al enviar el formulario. Por favor, inténtalo de nuevo.', 'error');
+            this.formSubmitted = false;
+        } finally {
+            this.setSubmitButtonLoading(false);
+        }
+    }
+    
+    collectFormData() {
+        const form = document.getElementById('leadForm');
+        const formData = new FormData(form);
+        
+        // Convert to object
+        const data = {};
+        for (let [key, value] of formData.entries()) {
+            data[key] = value;
+        }
+        
+        // Add consent status
+        data.sms_consent_granted = document.getElementById('sms_consent').checked;
+        data.whatsapp_consent_granted = document.getElementById('whatsapp_consent').checked;
+        
+        // Add consent text for audit
+        data.sms_consent_text = this.consentTextCapture.sms || '';
+        data.whatsapp_consent_text = this.consentTextCapture.whatsapp || '';
+        
+        // Update timestamp
+        data.timestamp = new Date().toISOString();
+        
+        return data;
+    }
+    
+    async submitToBackend(formData) {
+        try {
+            // Simulate API call (replace with actual endpoint)
+            const response = await fetch('/api/leads', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            });
+            
+            if (response.ok) {
+                return true;
+            } else {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+        } catch (error) {
+            // Fallback to localStorage for demo purposes
+            console.warn('Backend not available, saving to localStorage:', error);
+            this.saveToLocalStorage(formData);
+            return true;
+        }
+    }
+    
+    saveToLocalStorage(formData) {
+        try {
+            const existingLeads = JSON.parse(localStorage.getItem('synapleads_leads') || '[]');
+            existingLeads.push({
+                ...formData,
+                id: Date.now(),
+                saved_at: new Date().toISOString()
+            });
+            localStorage.setItem('synapleads_leads', JSON.stringify(existingLeads));
+        } catch (error) {
+            console.error('Error saving to localStorage:', error);
+        }
+    }
+    
+    trackConversion(formData) {
+        // Google Analytics 4
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'lead_form_submit', {
+                event_category: 'lead_generation',
+                event_label: 'seguros_gastos_finales',
+                sms_consent: formData.sms_consent_granted,
+                whatsapp_consent: formData.whatsapp_consent_granted,
+                lead_source: formData.utm_source || 'direct',
+                lead_medium: formData.utm_medium || 'website'
+            });
+        }
+        
+        // Meta Pixel
+        if (typeof fbq !== 'undefined') {
+            fbq('track', 'Lead', {
+                content_category: 'seguros_gastos_finales',
+                content_name: 'lead_form',
+                sms_consent: formData.sms_consent_granted,
+                whatsapp_consent: formData.whatsapp_consent_granted
+            });
+        }
+        
+        // Custom tracking
+        console.log('Lead conversion tracked:', {
+            timestamp: formData.timestamp,
+            sms_consent: formData.sms_consent_granted,
+            whatsapp_consent: formData.whatsapp_consent_granted,
+            source: formData.utm_source
+        });
+    }
+    
+    redirectToThankYou(formData) {
+        const params = new URLSearchParams({
+            nombre: formData.nombre,
+            telefono: formData.telefono,
+            estado: formData.estado,
+            timestamp: formData.timestamp,
+            sms_consent: formData.sms_consent_granted,
+            whatsapp_consent: formData.whatsapp_consent_granted
+        });
+        
+        window.location.href = `gracias.html?${params.toString()}`;
+    }
+    
+    trackConsentChange(type, granted) {
+        const timestamp = new Date().toISOString();
+        
+        // Analytics tracking
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'consent_change', {
+                event_category: 'consent',
+                event_label: type,
+                consent_granted: granted,
+                timestamp: timestamp
+            });
+        }
+        
+        console.log(`Consent ${type}:`, granted, 'at', timestamp);
+    }
+    
+    toggleFAQ(index) {
+        const faqItem = document.querySelector(`[data-faq="${index}"]`);
+        if (!faqItem) return;
+        
+        const isActive = faqItem.classList.contains('active');
+        
+        // Close all FAQ items
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.classList.remove('active');
+        });
+        
+        // Open clicked item if it wasn't already active
+        if (!isActive) {
+            faqItem.classList.add('active');
+            
+            // Track FAQ interaction
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'faq_interaction', {
+                    event_category: 'engagement',
+                    event_label: `faq_${index}`,
+                    faq_question: this.contentData.faq[index]?.question || 'unknown'
+                });
             }
         }
-        
-        if (!isValid) {
-            showFieldError(input, errorMessage);
-        }
-        
-        return isValid;
     }
     
-    function showFieldError(input, message) {
-        input.classList.add('error');
+    setSubmitButtonLoading(loading) {
+        const submitBtn = document.getElementById('submitBtn');
+        const btnText = submitBtn.querySelector('.btn-text');
+        const btnLoading = submitBtn.querySelector('.btn-loading');
         
-        // Remove existing error message
-        const existingError = input.parentNode.querySelector('.error-message');
-        if (existingError) {
-            existingError.remove();
-        }
-        
-        // Add new error message
-        const errorDiv = document.createElement('div');
-        errorDiv.className = 'error-message';
-        errorDiv.textContent = message;
-        input.parentNode.appendChild(errorDiv);
-    }
-    
-    function clearFieldError(e) {
-        const input = e.target;
-        input.classList.remove('error');
-        
-        const errorMessage = input.parentNode.querySelector('.error-message');
-        if (errorMessage) {
-            errorMessage.remove();
+        if (loading) {
+            submitBtn.disabled = true;
+            btnText.classList.add('hidden');
+            btnLoading.classList.remove('hidden');
+        } else {
+            submitBtn.disabled = false;
+            btnText.classList.remove('hidden');
+            btnLoading.classList.add('hidden');
         }
     }
     
-    function showFormError(message) {
-        // Create or update form error message
-        let errorDiv = document.querySelector('.form-error');
-        if (!errorDiv) {
-            errorDiv = document.createElement('div');
-            errorDiv.className = 'form-error';
-            const form = document.querySelector('#leadForm');
-            form.appendChild(errorDiv);
+    showFormMessage(message, type) {
+        // Remove existing message
+        const existingMessage = document.querySelector('.form-message');
+        if (existingMessage) {
+            existingMessage.remove();
         }
         
-        errorDiv.innerHTML = `
-            <i class="fas fa-exclamation-triangle"></i>
-            ${message}
-        `;
-        errorDiv.style.display = 'block';
+        // Create new message
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `form-message form-${type}`;
+        messageDiv.textContent = message;
         
-        // Auto-hide after 5 seconds
+        // Insert before submit button
+        const submitBtn = document.getElementById('submitBtn');
+        submitBtn.parentNode.insertBefore(messageDiv, submitBtn);
+        
+        // Auto-remove after 5 seconds
         setTimeout(() => {
-            errorDiv.style.display = 'none';
+            messageDiv.remove();
         }, 5000);
     }
     
-    function formatPhoneNumber(e) {
-        let value = e.target.value.replace(/\\D/g, '');
+    loadFallbackContent() {
+        console.warn('Loading fallback content');
         
-        if (value.length >= 10) {
-            if (value.length === 10) {
-                value = `(${value.slice(0,3)}) ${value.slice(3,6)}-${value.slice(6)}`;
-            } else if (value.length === 11 && value[0] === '1') {
-                value = `+1 (${value.slice(1,4)}) ${value.slice(4,7)}-${value.slice(7,11)}`;
-            }
-        }
-        
-        e.target.value = value;
+        // Set default content if JSON fails to load
+        this.updateElement('hero-title', 'Seguros de Gastos Finales');
+        this.updateElement('hero-subtitle', 'Protege a tu familia sin examen médico');
+        this.updateElement('form-title', 'Solicita Tu Información');
+        this.updateElement('form-subtitle', 'Contacto inmediato con agentes especializados');
     }
     
-    // ========================================
-    // FAQ ACCORDION
-    // ========================================
-    
-    function setupFAQAccordion() {
-        const faqItems = document.querySelectorAll('.faq-item');
-        
-        faqItems.forEach(item => {
-            const question = item.querySelector('.faq-item__question');
-            
-            question.addEventListener('click', () => {
-                const isActive = item.classList.contains('active');
-                
-                // Close all other items
-                faqItems.forEach(otherItem => {
-                    otherItem.classList.remove('active');
-                });
-                
-                // Toggle current item
-                if (!isActive) {
-                    item.classList.add('active');
-                    
-                    // Track FAQ interaction
-                    trackEvent('faq_open', {
-                        question: question.querySelector('h3').textContent,
-                        page: 'landing-seguros'
-                    });
-                }
-            });
-        });
-    }
-    
-    // ========================================
-    // CTA BUTTONS
-    // ========================================
-    
-    function setupCTAButtons() {
-        // Primary CTA buttons (phone calls)
-        const phoneCTAs = document.querySelectorAll('#cta-primary, #final-cta-phone');
-        phoneCTAs.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const phone = config.contact.phone.replace(/[^\\d]/g, '');
-                window.location.href = `tel:+${phone}`;
-                
-                trackEvent('click_to_call', {
-                    button_location: btn.id,
-                    page: 'landing-seguros'
-                });
-            });
-        });
-        
-        // WhatsApp CTA buttons
-        const whatsappCTAs = document.querySelectorAll('#cta-whatsapp');
-        whatsappCTAs.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const phone = config.contact.whatsapp.replace(/[^\\d]/g, '');
-                const message = encodeURIComponent('Hola, me interesa información sobre el seguro de gastos finales.');
-                window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
-                
-                trackEvent('click_to_whatsapp', {
-                    button_location: btn.id,
-                    page: 'landing-seguros'
-                });
-            });
-        });
-        
-        // Form CTA buttons
-        const formCTAs = document.querySelectorAll('#final-cta-form');
-        formCTAs.forEach(btn => {
-            btn.addEventListener('click', () => {
-                document.querySelector('#leadForm').scrollIntoView({
-                    behavior: 'smooth'
-                });
-                
-                trackEvent('scroll_to_form', {
-                    button_location: btn.id,
-                    page: 'landing-seguros'
-                });
-            });
-        });
-    }
-    
-    function setupPhoneAndWhatsAppLinks() {
-        // Update all phone links
-        const phoneLinks = document.querySelectorAll('a[href^=\"tel:\"]');
-        phoneLinks.forEach(link => {
-            const phone = config.contact.phone.replace(/[^\\d]/g, '');
-            link.href = `tel:+${phone}`;
-        });
-        
-        // Update all WhatsApp links
-        const whatsappLinks = document.querySelectorAll('a[href*=\"whatsapp\"], a[href*=\"wa.me\"]');
-        whatsappLinks.forEach(link => {
-            const phone = config.contact.whatsapp.replace(/[^\\d]/g, '');
-            const message = encodeURIComponent('Hola, me interesa información sobre seguros.');
-            link.href = `https://wa.me/${phone}?text=${message}`;
-        });
-    }
-    
-    // ========================================
-    // SMOOTH SCROLLING
-    // ========================================
-    
-    function setupSmoothScrolling() {
-        const scrollLinks = document.querySelectorAll('a[href^=\"#\"]');
-        
-        scrollLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                const targetId = link.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    e.preventDefault();
-                    
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                    
-                    trackEvent('navigation_click', {
-                        target_section: targetId,
-                        page: 'landing-seguros'
-                    });
-                }
-            });
-        });
-    }
-    
-    // ========================================
-    // ANALYTICS AND TRACKING
-    // ========================================
-    
-    function initializeAnalytics(analyticsConfig) {
-        // Google Analytics 4
-        if (analyticsConfig.ga4_id) {
-            window.gtag = window.gtag || function(){
-                (window.gtag.q = window.gtag.q || []).push(arguments);
-            };
-            
-            gtag('js', new Date());
-            gtag('config', analyticsConfig.ga4_id, {
-                page_title: 'Landing - Seguros de Gastos Finales',
+    captureAnalyticsData() {
+        // Track page view
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'page_view', {
+                page_title: document.title,
                 page_location: window.location.href
             });
         }
         
-        // Meta Pixel
-        if (analyticsConfig.meta_pixel_id) {
-            !function(f,b,e,v,n,t,s)
-            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-            n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)}(window, document,'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
+        // Track scroll depth
+        this.trackScrollDepth();
+        
+        // Track time on page
+        this.startTimeTracking();
+    }
+    
+    trackScrollDepth() {
+        let maxScroll = 0;
+        const milestones = [25, 50, 75, 100];
+        const trackedMilestones = new Set();
+        
+        window.addEventListener('scroll', () => {
+            const scrollPercent = Math.round(
+                (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
+            );
             
-            fbq('init', analyticsConfig.meta_pixel_id);
-            fbq('track', 'PageView');
-        }
-    }
-    
-    function trackPageView() {
-        if (typeof gtag !== 'undefined') {
-            gtag('event', 'page_view', {
-                page_title: 'Landing - Seguros de Gastos Finales',
-                page_location: window.location.href,
-                content_group1: 'Landing Pages'
-            });
-        }
-        
-        if (typeof fbq !== 'undefined') {
-            fbq('track', 'ViewContent', {
-                content_name: 'Seguros de Gastos Finales Landing',
-                content_category: 'Insurance'
-            });
-        }
-    }
-    
-    function trackEvent(eventName, parameters = {}) {
-        // Google Analytics 4
-        if (typeof gtag !== 'undefined') {
-            gtag('event', eventName, parameters);
-        }
-        
-        // Meta Pixel
-        if (typeof fbq !== 'undefined') {
-            switch(eventName) {
-                case 'form_submit':
-                    fbq('track', 'Lead');
-                    break;
-                case 'conversion':
-                    fbq('track', 'CompleteRegistration');
-                    break;
-                case 'click_to_call':
-                case 'click_to_whatsapp':
-                    fbq('track', 'Contact');
-                    break;
+            if (scrollPercent > maxScroll) {
+                maxScroll = scrollPercent;
+                
+                milestones.forEach(milestone => {
+                    if (scrollPercent >= milestone && !trackedMilestones.has(milestone)) {
+                        trackedMilestones.add(milestone);
+                        
+                        if (typeof gtag !== 'undefined') {
+                            gtag('event', 'scroll', {
+                                event_category: 'engagement',
+                                event_label: `${milestone}%`,
+                                value: milestone
+                            });
+                        }
+                    }
+                });
             }
-        }
-        
-        console.log('Event tracked:', eventName, parameters);
-    }
-    
-    // ========================================
-    // UTILITY FUNCTIONS
-    // ========================================
-    
-    function getUtmParameters() {
-        const urlParams = new URLSearchParams(window.location.search);
-        return {
-            utm_source: urlParams.get('utm_source') || '',
-            utm_medium: urlParams.get('utm_medium') || '',
-            utm_campaign: urlParams.get('utm_campaign') || '',
-            utm_term: urlParams.get('utm_term') || '',
-            utm_content: urlParams.get('utm_content') || '',
-            referrer: document.referrer || '',
-            landing_page: window.location.pathname
-        };
-    }
-    
-    // ========================================
-    // INTERSECTION OBSERVER FOR ANIMATIONS
-    // ========================================
-    
-    function setupScrollAnimations() {
-        const animatedElements = document.querySelectorAll('.benefit-card, .testimonial-card, .faq-item');
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        });
-        
-        animatedElements.forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
         });
     }
     
-    // Initialize animations after DOM is fully loaded
-    setTimeout(setupScrollAnimations, 100);
-    
+    startTimeTracking() {
+        const startTime = Date.now();
+        
+        window.addEventListener('beforeunload', () => {
+            const timeSpent = Math.round((Date.now() - startTime) / 1000);
+            
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'timing_complete', {
+                    name: 'page_engagement',
+                    value: timeSpent
+                });
+            }
+        });
+    }
+}
+
+// Initialize when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    window.landingPage = new LandingPage();
 });
 
-// Export functions for admin panel integration
-window.landingPageAPI = {
-    updateContent: function(newContent) {
-        // Function to update content dynamically
-        console.log('Updating landing content:', newContent);
-    },
-    
-    updateContact: function(newContact) {
-        // Function to update contact information
-        console.log('Updating contact info:', newContact);
-    },
-    
-    getLeads: function() {
-        // Function to retrieve stored leads
-        return JSON.parse(localStorage.getItem('leads') || '[]');
-    },
-    
-    clearLeads: function() {
-        // Function to clear leads (for admin use)
-        localStorage.removeItem('leads');
-        return true;
-    }
-};
+// Initialize content loader if available
+if (typeof ContentLoader !== 'undefined') {
+    ContentLoader.init();
+}
