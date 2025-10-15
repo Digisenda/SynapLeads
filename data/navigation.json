@@ -138,12 +138,12 @@
     },
     {
       "text": "Llamar",
-      "url": "tel:+15551234567",
+      "url": "tel:+18176705508",
       "icon": "fas fa-phone"
     },
     {
       "text": "WhatsApp", 
-      "url": "https://wa.me/15551234567",
+      "url": "https://wa.me/19405487913",
       "icon": "fab fa-whatsapp"
     }
   ],
@@ -176,13 +176,13 @@
     },
     "secondary": {
       "text": "Llamar Ahora", 
-      "url": "tel:+15551234567",
+      "url": "tel:+18176705508",
       "style": "secondary",
       "tracking": "cta_phone"
     },
     "whatsapp": {
       "text": "WhatsApp",
-      "url": "https://wa.me/15551234567",
+      "url": "https://wa.me/19405487913",
       "style": "whatsapp",
       "tracking": "cta_whatsapp"
     }

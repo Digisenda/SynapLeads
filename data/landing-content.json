@@ -79,7 +79,7 @@
         "label": "Teléfono",
         "type": "tel",
         "required": true,
-        "placeholder": "(555) 123-4567"
+        "placeholder": "(817) 670-5508"
       },
       {
         "name": "estado",
