@@ -101,8 +101,8 @@ class AdminMain {
                     dorado: "#FBBF24"
                 },
                 contact: {
-                    phone: "+1 (555) 123-4567",
-                    whatsapp: "+1 (555) 123-4567",
+                    phone: "+1 (817) 670-5508",
+                    whatsapp: "+1 (940) 548-7913",
                     email: "admin@synapleads.com"
                 },
                 analytics: {
@@ -233,11 +233,11 @@ class AdminMain {
                     <div class="form-grid">
                         <div class="form-group">
                             <label for="phone">Teléfono Principal</label>
-                            <input type="tel" id="phone" value="${data.contact?.phone || ''}" placeholder="+1 (555) 123-4567">
+                            <input type="tel" id="phone" value="${data.contact?.phone || ''}" placeholder="+1 (817) 670-5508">
                         </div>
                         <div class="form-group">
                             <label for="whatsapp">WhatsApp</label>
-                            <input type="tel" id="whatsapp" value="${data.contact?.whatsapp || ''}" placeholder="+1 (555) 123-4567">
+                            <input type="tel" id="whatsapp" value="${data.contact?.whatsapp || ''}" placeholder="+1 (940) 548-7913">
                         </div>
                         <div class="form-group">
                             <label for="email">Email de Contacto</label>
