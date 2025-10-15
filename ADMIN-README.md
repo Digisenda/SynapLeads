@@ -231,7 +231,7 @@ data/
 
 ### **Contacto:**
 - **Email:** admin@synapleads.com
-- **Teléfono:** +1 (555) 123-4567
+- **Teléfono:** +1 (817) 670-5508
 - **Horarios:** Lunes a Viernes, 9:00 AM - 6:00 PM CST
 
 ### **Documentación Adicional:**

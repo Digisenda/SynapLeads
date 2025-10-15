@@ -338,12 +338,12 @@ synapleads-website/
 
 ### **📧 Contacto Técnico**
 - **Email:** admin@synapleads.com
-- **Teléfono:** +1 (555) 123-4567
+- **Teléfono:** +1 (817) 670-5508
 - **Horarios:** Lunes a Viernes, 9:00 AM - 6:00 PM CST
 
 ### **🆘 Soporte de Emergencia**
 - **Email Urgente:** emergency@synapleads.com
-- **Teléfono 24/7:** +1 (555) EMERGENCY
+- **Teléfono 24/7:** +1 (817) 670-5508
 - **Documentación:** Ver ADMIN-README.md para guía completa
 
 ---

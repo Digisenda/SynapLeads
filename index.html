@@ -3,217 +3,322 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Synapleads - Conecta leads con agentes reales en segundos. La forma más rápida y confiable de escalar tu negocio de seguros de gastos finales.">
-    <meta name="keywords" content="seguros, gastos finales, leads, agentes, synapleads">
-    <meta name="author" content="Synapleads">
+    <title>SynapLeads - Conecta leads con agentes reales en segundos</title>
+    <meta name="description" content="La forma más rápida y confiable de escalar tu negocio de seguros de gastos finales. Live transfer inmediato con más de 50,000 familias protegidas.">
     
-    <!-- Open Graph -->
-    <meta property="og:title" content="Synapleads - Conecta leads con agentes reales">
-    <meta property="og:description" content="La forma más rápida y confiable de escalar tu negocio de seguros">
+    <!-- SEO Tags -->
+    <meta property="og:title" content="SynapLeads - Conecta leads con agentes reales en segundos">
+    <meta property="og:description" content="La forma más rápida y confiable de escalar tu negocio de seguros de gastos finales.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://synapleads.com">
     
-    <title>Synapleads - Conecta leads con agentes reales en segundos</title>
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    
-    <!-- CSS -->
+    <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <nav class="nav">
-                <div class="nav-brand">
-                    <img src="assets/images/logo.png" alt="Synapleads" class="logo" id="site-logo">
+                <div class="nav-logo">
+                    <img src="images/logo-synapleads.png" alt="SynapLeads" class="logo" onerror="this.style.display='none'">
+                    <span class="logo-text">SynapLeads</span>
                 </div>
                 
-                <ul class="nav-list" id="main-navigation">
-                    <li><a href="/" class="nav-link">Inicio</a></li>
-                    <li><a href="/seguros-gastos-finales.html" class="nav-link">Seguros Gastos Finales</a></li>
-                    <li><a href="#contact" class="nav-link">Contacto</a></li>
-                </ul>
-                
-                <div class="nav-actions">
-                    <a href="/seguros-gastos-finales.html" class="nav-cta">Solicitar Información</a>
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="#home" class="nav-link active">Inicio</a></li>
+                        <li><a href="#services" class="nav-link">Servicios</a></li>
+                        <li><a href="#benefits" class="nav-link">Beneficios</a></li>
+                        <li><a href="#testimonials" class="nav-link">Testimonios</a></li>
+                        <li><a href="#contact" class="nav-link">Contacto</a></li>
+                    </ul>
                 </div>
                 
-                <!-- Hamburger Menu -->
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <div class="nav-buttons">
+                    <a href="tel:+18176705508" class="btn btn-secondary">
+                        <i class="fas fa-phone"></i> Llamar
+                    </a>
+                    <a href="https://wa.me/19405487913" class="btn btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                    <a href="landing-seguros.html" class="btn btn-primary">Solicitar Info</a>
+                </div>
+                
+                <div class="nav-toggle" id="nav-toggle">
+                    <i class="fas fa-bars"></i>
                 </div>
             </nav>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1 class="hero-title" id="hero-title">Conecta leads con agentes reales en segundos</h1>
-                    <p class="hero-subtitle" id="hero-subtitle">La forma más rápida y confiable de escalar tu negocio de seguros</p>
-                    <div class="hero-actions">
-                        <a href="/seguros-gastos-finales.html" class="btn btn-primary" id="hero-cta">Solicitar Información</a>
-                        <a href="tel:+18176705508" class="btn btn-secondary" id="hero-phone">
-                            <i class="fas fa-phone"></i> Llamar Ahora
-                        </a>
-                    </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>✓ Live Transfer Inmediato</span>
                 </div>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section class="section">
-            <div class="container">
-                <h2 class="section-title" id="services-title">Nuestros Servicios</h2>
-                <p class="section-subtitle" id="services-subtitle">Soluciones completas para tu negocio de seguros</p>
                 
-                <div class="services-grid" id="services-grid">
-                    <!-- Los servicios se cargarán dinámicamente desde home-content.json -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Benefits Section -->
-        <section class="section section-gray">
-            <div class="container">
-                <h2 class="section-title">¿Por qué elegir Synapleads?</h2>
-                <p class="section-subtitle">Resultados comprobados que impulsan tu éxito</p>
+                <h1 class="hero-title" id="hero-title">
+                    Conecta leads con agentes reales en segundos
+                </h1>
                 
-                <div class="benefits-grid">
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <i class="fas fa-rocket"></i>
-                        </div>
-                        <h3 class="benefit-title">Conexión Instantánea</h3>
-                        <p class="benefit-description">Conectamos leads calificados con agentes en menos de 30 segundos</p>
-                    </div>
-                    
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3 class="benefit-title">Leads Verificados</h3>
-                        <p class="benefit-description">Todos nuestros leads pasan por un proceso de verificación riguroso</p>
-                    </div>
-                    
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3 class="benefit-title">Mayor Conversión</h3>
-                        <p class="benefit-description">Aumenta tus ventas hasta un 40% con nuestro sistema optimizado</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section class="section">
-            <div class="container">
-                <h2 class="section-title" id="testimonials-title">Lo que dicen nuestros clientes</h2>
+                <p class="hero-subtitle" id="hero-subtitle">
+                    La forma más rápida y confiable de escalar tu negocio de seguros de gastos finales
+                </p>
                 
-                <div class="testimonials-container" id="testimonials-container">
-                    <!-- Los testimonios se cargarán dinámicamente desde home-content.json -->
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">50,000+</div>
+                        <div class="stat-label">Familias Protegidas</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24h</div>
+                        <div class="stat-label">Procesamiento de Reclamos</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Satisfacción del Cliente</div>
+                    </div>
+                </div>
+                
+                <div class="hero-cta">
+                    <a href="landing-seguros.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-rocket"></i> Comenzar Ahora
+                    </a>
+                    <a href="tel:+18176705508" class="btn btn-secondary btn-large">
+                        <i class="fas fa-phone"></i> Llamar Ahora
+                    </a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- CTA Section -->
-        <section class="section section-gray">
-            <div class="container">
-                <div style="text-align: center;">
-                    <h2 class="section-title" id="cta-title">¿Listo para escalar tu negocio?</h2>
-                    <p class="section-subtitle" id="cta-subtitle">Únete a cientos de agentes que ya confían en Synapleads</p>
-                    <a href="/seguros-gastos-finales.html" class="btn btn-primary" id="cta-button">Comenzar Ahora</a>
-                </div>
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestros Servicios</h2>
+                <p>Soluciones completas para tu negocio de seguros</p>
             </div>
-        </section>
+            
+            <div class="services-grid" id="services-grid">
+                <!-- Los servicios se cargarán dinámicamente desde JSON -->
+            </div>
+        </div>
+    </section>
 
-        <!-- Contact Section -->
-        <section class="section" id="contact">
-            <div class="container">
-                <h2 class="section-title">Contacto</h2>
-                <div class="contact-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem; text-align: center;">
-                    
-                    <div class="contact-card" style="background: var(--color-white); padding: 2rem; border-radius: var(--border-radius); box-shadow: var(--box-shadow);">
-                        <div class="contact-icon" style="font-size: 2.5rem; color: var(--color-secondary); margin-bottom: 1rem;">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <h3>Llámanos</h3>
-                        <a href="tel:+18176705508" id="contact-phone">+1 (817) 670-5508</a>
-                    </div>
-                    
-                    <div class="contact-card" style="background: var(--color-white); padding: 2rem; border-radius: var(--border-radius); box-shadow: var(--box-shadow);">
-                        <div class="contact-icon" style="font-size: 2.5rem; color: var(--color-secondary); margin-bottom: 1rem;">
-                            <i class="fab fa-whatsapp"></i>
-                        </div>
-                        <h3>WhatsApp</h3>
-                        <p><a href="https://wa.me/19405487913" id="contact-whatsapp">Enviar Mensaje</a></p>
-                    </div>
-                    
-                    <div class="contact-card" style="background: var(--color-white); padding: 2rem; border-radius: var(--border-radius); box-shadow: var(--box-shadow);">
-                        <div class="contact-icon" style="font-size: 2.5rem; color: var(--color-secondary); margin-bottom: 1rem;">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <h3>Email</h3>
-                        <p><a href="mailto:admin@synapleads.com" id="contact-email">admin@synapleads.com</a></p>
-                    </div>
-                    
+    <!-- Benefits Section -->
+    <section id="benefits" class="benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2>¿Por qué elegir SynapLeads?</h2>
+                <p>Ventajas que marcan la diferencia en tu negocio</p>
+            </div>
+            
+            <div class="benefits-grid" id="benefits-grid">
+                <!-- Los beneficios se cargarán dinámicamente desde JSON -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Lo que dicen nuestros clientes</h2>
+                <p>Testimonios reales de agentes que confían en nosotros</p>
+            </div>
+            
+            <div class="testimonials-grid" id="testimonials-grid">
+                <!-- Los testimonios se cargarán dinámicamente desde JSON -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 id="cta-title">¿Listo para escalar tu negocio?</h2>
+                <p id="cta-subtitle">Comienza a recibir leads calificados hoy mismo</p>
+                
+                <div class="cta-buttons">
+                    <a href="landing-seguros.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-rocket"></i> Comenzar Ahora
+                    </a>
+                    <a href="tel:+18176705508" class="btn btn-secondary btn-large">
+                        <i class="fas fa-phone"></i> Llamar para Información
+                    </a>
+                </div>
+                
+                <div class="cta-guarantee">
+                    <p>✓ Sin compromiso inicial • ✓ Configuración gratuita • ✓ Soporte 24/7</p>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Contacta con Nosotros</h2>
+                    <p>Estamos aquí para ayudarte a hacer crecer tu negocio</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Teléfono</h3>
+                                <a href="tel:+18176705508">+1 (817) 670-5508</a>
+                                <p>Lunes a Viernes, 9:00 AM - 6:00 PM CST</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>WhatsApp</h3>
+                                <a href="https://wa.me/19405487913">+1 (940) 548-7913</a>
+                                <p>Respuesta inmediata</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <a href="mailto:info@synapleads.com">info@synapleads.com</a>
+                                <p>Respuesta en 24 horas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-cta">
+                    <h3>¿Listo para empezar?</h3>
+                    <p>Conecta con leads calificados hoy mismo</p>
+                    <a href="landing-seguros.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-rocket"></i> Comenzar Ahora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>Synapleads</h4>
-                    <p>La plataforma líder en generación de leads para seguros de gastos finales.</p>
-                    <div style="margin-top: 1rem;">
-                        <a href="#" style="margin-right: 1rem;"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" style="margin-right: 1rem;"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    <div class="footer-logo">
+                        <img src="images/logo-synapleads.png" alt="SynapLeads" onerror="this.style.display='none'">
+                        <span class="logo-text">SynapLeads</span>
+                    </div>
+                    <p>Conectando agentes con las familias que necesitan protección desde 1999.</p>
+                    
+                    <div class="footer-contact">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+18176705508">+1 (817) 670-5508</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/19405487913">WhatsApp</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@synapleads.com">info@synapleads.com</a>
+                        </div>
                     </div>
                 </div>
                 
-                <div id="footer-navigation">
-                    <!-- La navegación del footer se carga dinámicamente -->
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="landing-seguros.html">Seguros de Gastos Finales</a></li>
+                        <li><a href="#services">Live Transfer</a></li>
+                        <li><a href="#benefits">Leads Calificados</a></li>
+                        <li><a href="#testimonials">Testimonios</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#home">Acerca de Nosotros</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                        <li><a href="#testimonials">Testimonios</a></li>
+                        <li><a href="#services">Nuestros Servicios</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacidad.html">Política de Privacidad</a></li>
+                        <li><a href="terminos.html">Términos de Uso</a></li>
+                        <li><a href="sms-terms.html">Términos de SMS</a></li>
+                    </ul>
                 </div>
                 
                 <div class="footer-section">
                     <h4>Contacto</h4>
-                    <p><i class="fas fa-phone"></i> <span id="footer-phone">+1 (817) 670-5508</span>
-                    <p><i class="fas fa-envelope"></i> <span id="footer-email">admin@synapleads.com</span></p>
-                    <p><i class="fas fa-map-marker-alt"></i> <span id="footer-address">San Antonio, TX, USA</span></p>
+                    <ul>
+                        <li><a href="tel:+18176705508">Llamar Ahora</a></li>
+                        <li><a href="https://wa.me/19405487913">WhatsApp</a></li>
+                        <li><a href="mailto:info@synapleads.com">Email</a></li>
+                        <li><a href="landing-seguros.html">Solicitar Información</a></li>
+                    </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 Synapleads. Todos los derechos reservados.</p>
+                <p>&copy; 2025 SynapLeads LLC. Todos los derechos reservados. | San Antonio, TX, USA</p>
+                <p class="disclaimer">SynapLeads es un servicio de conexión con agentes de seguros. No somos una compañía de seguros.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- Scripts -->
     <script src="js/content-loader.js"></script>
     <script src="js/home.js"></script>
     <script src="js/main.js"></script>
+    
+    <!-- Analytics -->
+    <script>
+        // Google Analytics 4
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX'); // Reemplazar con GA4 ID real
+        
+        // Meta Pixel
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'XXXXXXXXXXXXXXX'); // Reemplazar con Meta Pixel ID real
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=XXXXXXXXXXXXXXX&ev=PageView&noscript=1"
+    /></noscript>
 </body>
 </html>
