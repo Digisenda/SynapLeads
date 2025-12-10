@@ -6,18 +6,114 @@
     <title>SynapLeads - Conecta leads con agentes reales en segundos</title>
     <meta name="description" content="La forma más rápida y confiable de escalar tu negocio de seguros de gastos finales. Live transfer inmediato con más de 50,000 familias protegidas.">
     
+    <!-- Meta Domain Verification -->
+    <meta name="facebook-domain-verification" content="8zhkva0bfd7vxwpnpc8k8vxmbxc9zr" />
+    
     <!-- SEO Tags -->
     <meta property="og:title" content="SynapLeads - Conecta leads con agentes reales en segundos">
     <meta property="og:description" content="La forma más rápida y confiable de escalar tu negocio de seguros de gastos finales.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://synapleads.com">
     
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1404030421337308');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1404030421337308&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    
+    <!-- Schema JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["LocalBusiness", "ProfessionalService"],
+      "name": "SynapLeads",
+      "legalName": "AGUILERATRANSLINK LLC",
+      "alternateName": "SynapLeads",
+      "description": "Servicio de generación y conexión de clientes potenciales con agentes de seguros certificados.",
+      "url": "https://synapleads.com",
+      "telephone": "+18176705508",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "San Antonio",
+        "addressRegion": "Texas",
+        "addressCountry": "US"
+      },
+      "areaServed": "United States"
+    }
+    </script>
+    
     <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        /* CTA Llamar Ahora - Azul Intenso */
+        .btn-call-now,
+        a[href^="tel:"] {
+            background-color: #0066FF !important;
+            border-color: #0066FF !important;
+        }
+        
+        .btn-call-now:hover,
+        a[href^="tel:"]:hover {
+            background-color: #0052CC !important;
+            border-color: #0052CC !important;
+        }
+        
+        /* Botón Flotante Móvil */
+        .floating-call-btn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #0066FF;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 50px;
+            box-shadow: 0 4px 12px rgba(0, 102, 255, 0.4);
+            z-index: 9999;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .floating-call-btn:hover {
+            background-color: #0052CC;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 102, 255, 0.5);
+        }
+        
+        .floating-call-btn i {
+            margin-right: 8px;
+        }
+        
+        @media (max-width: 768px) {
+            .floating-call-btn {
+                display: flex;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Botón Flotante Móvil -->
+    <a href="tel:+18176705508" class="floating-call-btn">
+        <i class="fas fa-phone"></i> Llamar
+    </a>
+
     <!-- Header -->
     <header class="header" id="header">
         <div class="container">
@@ -38,11 +134,8 @@
                 </div>
                 
                 <div class="nav-buttons">
-                    <a href="tel:+18176705508" class="btn btn-secondary">
+                    <a href="tel:+18176705508" class="btn btn-call-now">
                         <i class="fas fa-phone"></i> Llamar
-                    </a>
-                    <a href="https://wa.me/19405487913" class="btn btn-whatsapp">
-                        <i class="fab fa-whatsapp"></i> WhatsApp
                     </a>
                     <a href="landing-seguros.html" class="btn btn-primary">Solicitar Info</a>
                 </div>
@@ -90,7 +183,7 @@
                     <a href="landing-seguros.html" class="btn btn-primary btn-large">
                         <i class="fas fa-rocket"></i> Comenzar Ahora
                     </a>
-                    <a href="tel:+18176705508" class="btn btn-secondary btn-large">
+                    <a href="tel:+18176705508" class="btn btn-call-now btn-large">
                         <i class="fas fa-phone"></i> Llamar Ahora
                     </a>
                 </div>
@@ -151,7 +244,7 @@
                     <a href="landing-seguros.html" class="btn btn-primary btn-large">
                         <i class="fas fa-rocket"></i> Comenzar Ahora
                     </a>
-                    <a href="tel:+18176705508" class="btn btn-secondary btn-large">
+                    <a href="tel:+18176705508" class="btn btn-call-now btn-large">
                         <i class="fas fa-phone"></i> Llamar para Información
                     </a>
                 </div>
@@ -184,23 +277,12 @@
                         </div>
                         
                         <div class="contact-method">
-                            <div class="contact-icon whatsapp">
-                                <i class="fab fa-whatsapp"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h3>WhatsApp</h3>
-                                <a href="https://wa.me/19405487913">+1 (940) 548-7913</a>
-                                <p>Respuesta inmediata</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-method">
                             <div class="contact-icon">
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <div class="contact-details">
                                 <h3>Email</h3>
-                                <a href="mailto:info@synapleads.com">info@synapleads.com</a>
+                                <a href="mailto:admin.synapleads@digisendaai.com">admin.synapleads@digisendaai.com</a>
                                 <p>Respuesta en 24 horas</p>
                             </div>
                         </div>
@@ -235,12 +317,8 @@
                             <a href="tel:+18176705508">+1 (817) 670-5508</a>
                         </div>
                         <div class="contact-item">
-                            <i class="fab fa-whatsapp"></i>
-                            <a href="https://wa.me/19405487913">WhatsApp</a>
-                        </div>
-                        <div class="contact-item">
                             <i class="fas fa-envelope"></i>
-                            <a href="mailto:info@synapleads.com">info@synapleads.com</a>
+                            <a href="mailto:admin.synapleads@digisendaai.com">admin.synapleads@digisendaai.com</a>
                         </div>
                     </div>
                 </div>
@@ -270,7 +348,6 @@
                     <ul>
                         <li><a href="privacidad.html">Política de Privacidad</a></li>
                         <li><a href="terminos.html">Términos de Uso</a></li>
-                        <li><a href="sms-terms.html">Términos de SMS</a></li>
                     </ul>
                 </div>
                 
@@ -278,8 +355,7 @@
                     <h4>Contacto</h4>
                     <ul>
                         <li><a href="tel:+18176705508">Llamar Ahora</a></li>
-                        <li><a href="https://wa.me/19405487913">WhatsApp</a></li>
-                        <li><a href="mailto:info@synapleads.com">Email</a></li>
+                        <li><a href="mailto:admin.synapleads@digisendaai.com">Email</a></li>
                         <li><a href="landing-seguros.html">Solicitar Información</a></li>
                     </ul>
                 </div>
@@ -298,27 +374,12 @@
     <script src="js/main.js"></script>
     
     <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8RR059FL7N"></script>
     <script>
-        // Google Analytics 4
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX'); // Reemplazar con GA4 ID real
-        
-        // Meta Pixel
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', 'XXXXXXXXXXXXXXX'); // Reemplazar con Meta Pixel ID real
-        fbq('track', 'PageView');
+        gtag('config', 'G-8RR059FL7N');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-        src="https://www.facebook.com/tr?id=XXXXXXXXXXXXXXX&ev=PageView&noscript=1"
-    /></noscript>
 </body>
 </html>

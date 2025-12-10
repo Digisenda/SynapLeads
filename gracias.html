@@ -6,13 +6,85 @@
     <title>¡Gracias por tu solicitud! - SynapLeads</title>
     <meta name="description" content="Hemos recibido tu información. Un agente especializado se pondrá en contacto contigo muy pronto.">
     
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1404030421337308');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1404030421337308&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    
     <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/gracias.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        /* CTA Llamar Ahora - Azul Intenso */
+        .btn-call-now,
+        a[href^="tel:"] {
+            background-color: #0066FF !important;
+            border-color: #0066FF !important;
+        }
+        
+        .btn-call-now:hover,
+        a[href^="tel:"]:hover {
+            background-color: #0052CC !important;
+            border-color: #0052CC !important;
+        }
+        
+        /* Botón Flotante Móvil */
+        .floating-call-btn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #0066FF;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 50px;
+            box-shadow: 0 4px 12px rgba(0, 102, 255, 0.4);
+            z-index: 9999;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .floating-call-btn:hover {
+            background-color: #0052CC;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 102, 255, 0.5);
+        }
+        
+        .floating-call-btn i {
+            margin-right: 8px;
+        }
+        
+        @media (max-width: 768px) {
+            .floating-call-btn {
+                display: flex;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Botón Flotante Móvil -->
+    <a href="tel:+18176705508" class="floating-call-btn">
+        <i class="fas fa-phone"></i> Llamar
+    </a>
+
     <!-- Header -->
     <header class="header">
         <div class="container">
@@ -23,11 +95,8 @@
                 </div>
                 
                 <div class="nav-buttons">
-                    <a href="tel:+18176705508" class="btn btn-secondary">
+                    <a href="tel:+18176705508" class="btn btn-call-now">
                         <i class="fas fa-phone"></i> Llamar
-                    </a>
-                    <a href="https://wa.me/19405487913" class="btn btn-whatsapp">
-                        <i class="fab fa-whatsapp"></i> WhatsApp
                     </a>
                 </div>
             </nav>
@@ -138,21 +207,12 @@
                     <p>Estamos aquí para ayudarte</p>
                     
                     <div class="contact-buttons">
-                        <a href="tel:+18176705508" class="btn btn-primary btn-large">
+                        <a href="tel:+18176705508" class="btn btn-call-now btn-large">
                             <i class="fas fa-phone"></i>
                             <div class="btn-content">
                                 <span class="btn-title">Llamar Directamente</span>
                                 <span class="btn-subtitle">+1 (817) 670-5508</span>
                                 <span class="btn-availability">Disponible 24/7</span>
-                            </div>
-                        </a>
-                        
-                        <a href="https://wa.me/19405487913" class="btn btn-whatsapp btn-large">
-                            <i class="fab fa-whatsapp"></i>
-                            <div class="btn-content">
-                                <span class="btn-title">Enviar WhatsApp</span>
-                                <span class="btn-subtitle">+1 (940) 548-7913</span>
-                                <span class="btn-availability">Respuesta inmediata</span>
                             </div>
                         </a>
                     </div>
@@ -257,8 +317,7 @@
                     <h4>Contacto Directo</h4>
                     <ul>
                         <li><a href="tel:+18176705508">+1 (817) 670-5508</a></li>
-                        <li><a href="https://wa.me/19405487913">WhatsApp</a></li>
-                        <li><a href="mailto:info@synapleads.com">Email</a></li>
+                        <li><a href="mailto:admin.synapleads@digisendaai.com">Email</a></li>
                     </ul>
                 </div>
                 
@@ -267,7 +326,6 @@
                     <ul>
                         <li><a href="privacidad.html">Política de Privacidad</a></li>
                         <li><a href="terminos.html">Términos de Uso</a></li>
-                        <li><a href="sms-terms.html">Términos de SMS</a></li>
                     </ul>
                 </div>
             </div>
@@ -284,14 +342,18 @@
     <script src="js/gracias.js"></script>
     
     <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8RR059FL7N"></script>
     <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-8RR059FL7N');
+        
         // Track thank you page view
-        if (typeof gtag !== 'undefined') {
-            gtag('event', 'page_view', {
-                page_title: 'Thank You Page',
-                page_location: window.location.href
-            });
-        }
+        gtag('event', 'page_view', {
+            page_title: 'Thank You Page',
+            page_location: window.location.href
+        });
         
         // Track conversion
         if (typeof fbq !== 'undefined') {

@@ -12,13 +12,85 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://synapleads.com/landing-seguros.html">
     
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1404030421337308');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1404030421337308&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    
     <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/landing.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        /* CTA Llamar Ahora - Azul Intenso */
+        .btn-call-now,
+        a[href^="tel:"] {
+            background-color: #0066FF !important;
+            border-color: #0066FF !important;
+        }
+        
+        .btn-call-now:hover,
+        a[href^="tel:"]:hover {
+            background-color: #0052CC !important;
+            border-color: #0052CC !important;
+        }
+        
+        /* Botón Flotante Móvil */
+        .floating-call-btn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #0066FF;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 50px;
+            box-shadow: 0 4px 12px rgba(0, 102, 255, 0.4);
+            z-index: 9999;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .floating-call-btn:hover {
+            background-color: #0052CC;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 102, 255, 0.5);
+        }
+        
+        .floating-call-btn i {
+            margin-right: 8px;
+        }
+        
+        @media (max-width: 768px) {
+            .floating-call-btn {
+                display: flex;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Botón Flotante Móvil -->
+    <a href="tel:+18176705508" class="floating-call-btn">
+        <i class="fas fa-phone"></i> Llamar
+    </a>
+
     <!-- Header -->
     <header class="header" id="header">
         <div class="container">
@@ -32,16 +104,14 @@
                     <ul class="nav-list">
                         <li><a href="index.html" class="nav-link">Inicio</a></li>
                         <li><a href="#benefits" class="nav-link">Beneficios</a></li>
-                        <li><a href="#form" class="nav-link">Solicitar Info</a></li>
                         <li><a href="#faq" class="nav-link">FAQ</a></li>
                     </ul>
                 </div>
                 
                 <div class="nav-buttons">
-                    <a href="tel:+18176705508" class="btn btn-secondary">
+                    <a href="tel:+18176705508" class="btn btn-call-now">
                         <i class="fas fa-phone"></i> Llamar
                     </a>
-                    <a href="#form" class="btn btn-primary">Solicitar Info</a>
                 </div>
                 
                 <div class="nav-toggle" id="nav-toggle">
@@ -91,10 +161,7 @@
                 </div>
                 
                 <div class="hero-cta">
-                    <a href="#form" class="btn btn-primary btn-large" id="hero-cta-primary">
-                        <i class="fas fa-file-alt"></i> Solicitar Información
-                    </a>
-                    <a href="tel:+18176705508" class="btn btn-secondary btn-large" id="hero-cta-secondary">
+                    <a href="tel:+18176705508" class="btn btn-call-now btn-large" id="hero-cta-secondary">
                         <i class="fas fa-phone"></i> Llamar Ahora
                     </a>
                 </div>
@@ -112,132 +179,6 @@
             
             <div class="benefits-grid" id="benefits-grid">
                 <!-- Los beneficios se cargarán dinámicamente desde JSON -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Form Section -->
-    <section class="form-section" id="form">
-        <div class="container">
-            <div class="form-wrapper">
-                <div class="form-header">
-                    <h2 id="form-title">Solicita Tu Información Gratuita</h2>
-                    <p id="form-subtitle">Un agente especializado se pondrá en contacto contigo</p>
-                </div>
-                
-                <form class="lead-form" id="leadForm">
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label for="nombre">Nombre Completo *</label>
-                            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo">
-                            <div class="error-message" id="nombre-error"></div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="telefono">Teléfono *</label>
-                            <input type="tel" id="telefono" name="telefono" required placeholder="(817) 670-5508">
-                            <div class="error-message" id="telefono-error"></div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="estado">Estado *</label>
-                            <select id="estado" name="estado" required>
-                                <option value="">Selecciona tu estado</option>
-                                <option value="Texas">Texas</option>
-                                <option value="Florida">Florida</option>
-                                <option value="California">California</option>
-                                <option value="Arizona">Arizona</option>
-                                <option value="Nevada">Nevada</option>
-                                <option value="Otro">Otro</option>
-                            </select>
-                            <div class="error-message" id="estado-error"></div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="edad">Rango de Edad *</label>
-                            <select id="edad" name="edad" required>
-                                <option value="">Selecciona tu edad</option>
-                                <option value="30-40 años">30-40 años</option>
-                                <option value="41-50 años">41-50 años</option>
-                                <option value="51-60 años">51-60 años</option>
-                                <option value="61-70 años">61-70 años</option>
-                                <option value="71+ años">71+ años</option>
-                            </select>
-                            <div class="error-message" id="edad-error"></div>
-                        </div>
-                    </div>
-                    
-                    <!-- Consent Checkboxes -->
-                    <div class="consent-section">
-                        <h3>Preferencias de Comunicación</h3>
-                        <p class="consent-intro">Selecciona cómo prefieres que te contactemos (opcional):</p>
-                        
-                        <div class="consent-group">
-                            <div class="checkbox-wrapper">
-                                <input type="checkbox" id="sms_consent" name="sms_consent" value="1">
-                                <label for="sms_consent" class="checkbox-label">
-                                    <span class="checkmark"></span>
-                                    <div class="consent-text">
-                                        <strong>Mensajes de Texto (SMS)</strong><br>
-                                        Acepto recibir mensajes de texto (SMS) de <strong>SynapLeads</strong> para recordatorios, actualizaciones y ofertas ocasionales relacionadas con seguros de gastos finales. Frecuencia: máximo 4 mensajes por mes. Para cancelar, responde STOP. Para ayuda, responde HELP. Pueden aplicar cargos por mensajes y datos según tu plan. El consentimiento no es condición de compra. Consulta nuestros <a href="/sms-terms" target="_blank">Términos de SMS</a> y <a href="/privacidad" target="_blank">Política de Privacidad</a>.
-                                    </div>
-                                </label>
-                            </div>
-                        </div>
-                        
-                        <div class="consent-group">
-                            <div class="checkbox-wrapper">
-                                <input type="checkbox" id="whatsapp_consent" name="whatsapp_consent" value="1">
-                                <label for="whatsapp_consent" class="checkbox-label">
-                                    <span class="checkmark"></span>
-                                    <div class="consent-text">
-                                        <strong>WhatsApp</strong><br>
-                                        Acepto recibir comunicaciones por WhatsApp de SynapLeads para información sobre seguros de gastos finales. Puedo revocar este consentimiento en cualquier momento.
-                                    </div>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Hidden Fields for Audit -->
-                    <input type="hidden" name="consent_version" value="v1.0-2025-01-14">
-                    <input type="hidden" name="page_url" id="page_url">
-                    <input type="hidden" name="utm_source" id="utm_source">
-                    <input type="hidden" name="utm_medium" id="utm_medium">
-                    <input type="hidden" name="utm_campaign" id="utm_campaign">
-                    <input type="hidden" name="timestamp" id="timestamp">
-                    <input type="hidden" name="user_ip" id="user_ip">
-                    <input type="hidden" name="user_agent" id="user_agent">
-                    <input type="hidden" name="sms_consent_text" id="sms_consent_text">
-                    <input type="hidden" name="whatsapp_consent_text" id="whatsapp_consent_text">
-                    
-                    <!-- Privacy Disclaimer -->
-                    <div class="privacy-disclaimer">
-                        <p>Al enviar este formulario, acepto que mis datos personales sean procesados de acuerdo con la <a href="/privacidad" target="_blank">Política de Privacidad</a> de SynapLeads.</p>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary btn-large form-submit" id="submitBtn">
-                        <span class="btn-text">Solicitar Información Ahora</span>
-                        <span class="btn-loading hidden">
-                            <i class="fas fa-spinner fa-spin"></i> Enviando...
-                        </span>
-                    </button>
-                    
-                    <div class="form-guarantees">
-                        <div class="guarantee-item">
-                            <i class="fas fa-check"></i>
-                            <span>Sin costo por la información</span>
-                        </div>
-                        <div class="guarantee-item">
-                            <i class="fas fa-shield-alt"></i>
-                            <span>Sin compromiso de compra</span>
-                        </div>
-                        <div class="guarantee-item">
-                            <i class="fas fa-lock"></i>
-                            <span>Información confidencial protegida</span>
-                        </div>
-                    </div>
-                </form>
             </div>
         </div>
     </section>
@@ -287,12 +228,8 @@
                             <a href="tel:+18176705508">+1 (817) 670-5508</a>
                         </div>
                         <div class="contact-item">
-                            <i class="fab fa-whatsapp"></i>
-                            <a href="https://wa.me/19405487913">WhatsApp</a>
-                        </div>
-                        <div class="contact-item">
                             <i class="fas fa-envelope"></i>
-                            <a href="mailto:info@synapleads.com">info@synapleads.com</a>
+                            <a href="mailto:admin.synapleads@digisendaai.com">admin.synapleads@digisendaai.com</a>
                         </div>
                     </div>
                 </div>
@@ -301,7 +238,7 @@
                     <h4>Servicios</h4>
                     <ul>
                         <li><a href="#benefits">Seguros de Gastos Finales</a></li>
-                        <li><a href="#form">Live Transfer</a></li>
+                        <li><a href="tel:+18176705508">Live Transfer</a></li>
                         <li><a href="#faq">Información y FAQ</a></li>
                     </ul>
                 </div>
@@ -311,8 +248,7 @@
                     <ul>
                         <li><a href="/privacidad">Política de Privacidad</a></li>
                         <li><a href="/terminos">Términos de Uso</a></li>
-                        <li><a href="/sms-terms">Términos de SMS</a></li>
-                        <a href="disclaimer.html">Disclaimer</a>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
                     </ul>
                 </div>
                 
@@ -320,9 +256,7 @@
                     <h4>Contacto</h4>
                     <ul>
                         <li><a href="tel:+18176705508">Llamar Ahora</a></li>
-                        <li><a href="https://wa.me/19405487913">WhatsApp</a></li>
-                        <li><a href="mailto:info@synapleads.com">Email</a></li>
-                        <li><a href="#form">Formulario de Contacto</a></li>
+                        <li><a href="mailto:admin.synapleads@digisendaai.com">Email</a></li>
                     </ul>
                 </div>
             </div>
@@ -339,27 +273,12 @@
     <script src="js/landing.js"></script>
     
     <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8RR059FL7N"></script>
     <script>
-        // Google Analytics 4
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX'); // Reemplazar con GA4 ID real
-        
-        // Meta Pixel
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', 'XXXXXXXXXXXXXXX'); // Reemplazar con Meta Pixel ID real
-        fbq('track', 'PageView');
+        gtag('config', 'G-8RR059FL7N');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-        src="https://www.facebook.com/tr?id=XXXXXXXXXXXXXXX&ev=PageView&noscript=1"
-    /></noscript>
 </body>
 </html>
