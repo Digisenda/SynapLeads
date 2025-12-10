@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página No Encontrada - SynapLeads</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .error-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, var(--grafito) 0%, #2a2a2c 100%);
+        }
+        .error-content {
+            text-align: center;
+            max-width: 600px;
+        }
+        .error-code {
+            font-size: 120px;
+            font-weight: 700;
+            color: var(--turquesa);
+            line-height: 1;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 20px rgba(0, 209, 178, 0.3);
+        }
+        .error-title {
+            font-size: 32px;
+            font-weight: 600;
+            color: var(--blanco);
+            margin-bottom: 15px;
+        }
+        .error-description {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        .error-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .error-actions .btn {
+            padding: 15px 30px;
+            font-size: 16px;
+        }
+        .error-icon {
+            font-size: 80px;
+            color: var(--turquesa);
+            margin-bottom: 30px;
+            opacity: 0.8;
+        }
+        .error-suggestions {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .error-suggestions h3 {
+            color: var(--blanco);
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .error-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+        .error-links a {
+            color: var(--turquesa);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 16px;
+        }
+        .error-links a:hover {
+            color: var(--blanco);
+            transform: translateX(5px);
+        }
+        .error-links a i {
+            margin-right: 8px;
+        }
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 80px;
+            }
+            .error-title {
+                font-size: 24px;
+            }
+            .error-description {
+                font-size: 16px;
+            }
+            .error-actions {
+                flex-direction: column;
+            }
+            .error-actions .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="nav-logo">
+                    <img src="images/logo-synapleads.png" alt="SynapLeads" class="logo" onerror="this.style.display='none'">
+                    <span class="logo-text">SynapLeads</span>
+                </div>
+                
+                <div class="nav-buttons">
+                    <a href="index.html" class="btn btn-secondary">
+                        <i class="fas fa-home"></i> Inicio
+                    </a>
+                    <a href="tel:+18176705508" class="btn btn-primary">
+                        <i class="fas fa-phone"></i> Llamar
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Error Container -->
+    <div class="error-container">
+        <div class="error-content">
+            <div class="error-icon">
+                <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            
+            <div class="error-code">404</div>
+            
+            <h1 class="error-title">Página No Encontrada</h1>
+            
+            <p class="error-description">
+                Lo sentimos, la página que buscas no existe o ha sido movida. 
+                Verifica la URL o navega a nuestra página principal.
+            </p>
+            
+            <div class="error-actions">
+                <a href="index.html" class="btn btn-primary btn-large">
+                    <i class="fas fa-home"></i> Ir al Inicio
+                </a>
+                <a href="landing-seguros.html" class="btn btn-secondary btn-large">
+                    <i class="fas fa-shield-alt"></i> Ver Seguros
+                </a>
+                <a href="tel:+18176705508" class="btn btn-secondary btn-large">
+                    <i class="fas fa-phone"></i> Contactar
+                </a>
+            </div>
+            
+            <div class="error-suggestions">
+                <h3>Enlaces Útiles:</h3>
+                <div class="error-links">
+                    <a href="index.html">
+                        <i class="fas fa-home"></i> Página Principal
+                    </a>
+                    <a href="landing-seguros.html">
+                        <i class="fas fa-shield-alt"></i> Seguros de Gastos Finales
+                    </a>
+                    <a href="privacidad.html">
+                        <i class="fas fa-lock"></i> Política de Privacidad
+                    </a>
+                    <a href="terminos.html">
+                        <i class="fas fa-file-contract"></i> Términos de Uso
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" style="background: var(--grafito); color: var(--blanco); padding: 20px 0; text-align: center;">
+        <div class="container">
+            <p>&copy; 2025 SynapLeads LLC. Todos los derechos reservados.</p>
+            <p style="margin-top: 10px;">
+                <a href="tel:+18176705508" style="color: var(--turquesa); margin: 0 10px;">+1 (817) 670-5508</a> | 
+                <a href="mailto:info@synapleads.com" style="color: var(--turquesa); margin: 0 10px;">info@synapleads.com</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Track 404 error in analytics
+        if (window.gtag) {
+            window.gtag('event', 'page_not_found', {
+                'page_location': window.location.href,
+                'page_referrer': document.referrer
+            });
+        }
+        if (window.fbq) {
+            window.fbq('track', 'PageNotFound', {
+                'url': window.location.href
+            });
+        }
+    </script>
+</body>
+</html>

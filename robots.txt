@@ -1,0 +1,23 @@
+# Robots.txt para SynapLeads
+# https://synapleads.com
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /data/
+
+# Sitemap location
+Sitemap: https://synapleads.com/sitemap.xml
+
+# Crawl delay (opcional)
+# Crawl-delay: 10
+
+# Specific bot rules
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
